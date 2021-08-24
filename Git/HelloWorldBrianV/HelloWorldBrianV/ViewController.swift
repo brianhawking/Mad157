@@ -20,7 +20,7 @@ class ViewController: UIViewController {
             view.backgroundColor = UIColor.white
         }
         else {
-            view.backgroundColor = UIColor.black
+            view.backgroundColor = UIColor.green
         }
         
         
