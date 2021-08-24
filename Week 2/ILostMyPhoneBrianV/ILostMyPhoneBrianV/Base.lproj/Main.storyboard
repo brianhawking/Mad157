@@ -17,21 +17,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45C-cX-tAC">
-                                <rect key="frame" x="136" y="344.66666666666669" width="142" height="47"/>
+                                <rect key="frame" x="123.66666666666669" y="344.66666666666669" width="167" height="47"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
-                                <state key="normal" title="Get my info!"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="  Get my info!  ">
+                                    <color key="titleShadowColor" systemColor="systemYellowColor"/>
+                                </state>
                                 <connections>
                                     <action selector="showContactInfoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Xd-QS-sLp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm lost! Help me find my way home..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxB-oq-iIa">
-                                <rect key="frame" x="20" y="119.66666666666669" width="374" height="85"/>
+                                <rect key="frame" x="20" y="50" width="374" height="85"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uQ-1b-U3S">
-                                <rect key="frame" x="207" y="461.66666666666669" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dsfgsdfg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uQ-1b-U3S">
+                                <rect key="frame" x="10" y="659" width="394" height="37"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,11 +46,12 @@
                         <constraints>
                             <constraint firstItem="ZxB-oq-iIa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ag-Nu-q42"/>
                             <constraint firstItem="45C-cX-tAC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2By-KC-aBT"/>
+                            <constraint firstItem="5uQ-1b-U3S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Is-5m-9H4"/>
                             <constraint firstItem="45C-cX-tAC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8uV-xE-pAb"/>
-                            <constraint firstItem="5uQ-1b-U3S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bh7-Rg-v4m"/>
-                            <constraint firstItem="45C-cX-tAC" firstAttribute="top" secondItem="ZxB-oq-iIa" secondAttribute="bottom" constant="140" id="Hzn-Da-V86"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5uQ-1b-U3S" secondAttribute="bottom" constant="40" id="Kbd-X9-1SW"/>
+                            <constraint firstItem="5uQ-1b-U3S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="TXH-am-z1D"/>
                             <constraint firstItem="ZxB-oq-iIa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UmU-Bp-Pgi"/>
-                            <constraint firstItem="5uQ-1b-U3S" firstAttribute="top" secondItem="45C-cX-tAC" secondAttribute="bottom" constant="70" id="nfK-9B-W3k"/>
+                            <constraint firstItem="ZxB-oq-iIa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="bJP-hu-qzW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -59,8 +64,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
