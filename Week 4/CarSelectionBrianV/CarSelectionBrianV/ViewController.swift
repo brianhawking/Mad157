@@ -11,12 +11,13 @@ class ViewController: UIViewController {
     
     // MARK: properties
     
+    // default values for car
     var carCost = 26949
     var carColor = "blue"
     var carUpholstry = "light"
     var carRims = "steel"
 
-    
+    // add accessories to accessory array
     var accessories: [(name: String, added: Bool, cost: Int)] = [
         (name: "charger", added: false, cost: 292),
         (name: "auto-dimming-mirror", added: false, cost: 365),
@@ -58,12 +59,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     
+        // set borders to 5 (makes all buttons look smaller)
         for button in colorButtons {
             button.layer.borderWidth = 5
             button.layer.borderColor = UIColor.white.cgColor
         }
+        
+        // set border to 0. Makes the color button look bigger
         colorButtons[0].layer.borderWidth = 0
         
+        // add accessories to images array
         for accessory in accessories {
             images.append(accessory.name)
         }
@@ -73,46 +78,74 @@ class ViewController: UIViewController {
     
 
     @IBAction func selectColorAction(_ sender: UIButton) {
+        
+        // change main image to show new car color
         mainImage.image = UIImage(named: images[sender.tag])
+        carColor = images[sender.tag]
+        
+        // make all color buttons same size
         for button in colorButtons {
             button.layer.borderWidth = 5
             button.layer.borderColor = UIColor.white.cgColor
         }
+        
+        // makes current color button appear bigger
         sender.layer.borderWidth = 0
+        
+        updateCarCost()
     }
     
     
     @IBAction func selectUpholstryAction(_ sender: UIButton) {
-        mainImage.image = UIImage(named: images[sender.tag])
         
+        // change main image to show upholstry
+        mainImage.image = UIImage(named: images[sender.tag])
+        carUpholstry = images[sender.tag]
+        
+        // remove borders
         for button in upholstryButtons {
             button.layer.borderWidth = 0
         }
+        
+        // add border on selected upholstry
         sender.layer.borderWidth = 2
+        
+        updateCarCost()
     }
     
     @IBAction func selectRimAction(_ sender: UIButton) {
+        
+        // select the rim style
+        if sender.tag == 100 {
+            carRims = "steel"
+        }
+        else {
+            carRims = "alloy"
+        }
         for button in rimButtons {
             button.layer.borderWidth = 0
         }
         sender.layer.borderWidth = 2
+        
+        updateCarCost()
     }
     
     
     @IBAction func addAccessoryAction(_ sender: UIButton) {
+        
+        // change main image to show accessory image
         mainImage.image = UIImage(named: images[sender.tag])
         
+        // remove accessory from cart, if already selected
         if (accessories[sender.tag-7].added == true) {
             accessories[sender.tag-7].added = false
             carCost -= accessories[sender.tag-7].cost
             sender.layer.borderWidth = 0
-            print("removed")
         }
         else {
             accessories[sender.tag-7].added = true
             sender.layer.borderWidth = 2
             carCost += accessories[sender.tag-7].cost
-            print("added")
         }
         
         updateCarCost()
@@ -120,6 +153,22 @@ class ViewController: UIViewController {
     
     func updateCarCost() {
         carCostLabel.text = "Total Cost: $\(carCost)"
+        
+        // output
+        print("==================================")
+        print("==================================")
+        print("Car Details")
+        print("Car Cost: \(carCost)")
+        print("Car Color: \(carColor)")
+        print("Upholstry: \(carUpholstry)")
+        print("Rims: \(carRims)")
+        print("Accessories")
+        print("---------------------")
+        for accessory in accessories {
+            if accessory.added == true {
+                print(accessory.name, accessory.cost)
+            }
+        }
     }
     
 }
