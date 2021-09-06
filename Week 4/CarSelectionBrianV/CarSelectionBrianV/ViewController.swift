@@ -131,7 +131,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func addAccessoryAction(_ sender: UIButton) {
+    @IBAction func addAccessoryAction(_ sender: UIButton) { 
         
         // change main image to show accessory image
         mainImage.image = UIImage(named: images[sender.tag])
