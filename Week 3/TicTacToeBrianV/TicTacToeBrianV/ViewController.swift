@@ -9,6 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var counter: Int = 0
+    
+    var onePlayer: Bool = false
+    var piece: String = "meateater"
+    var computerPlayer: Int = 0
+    var locked: Bool = false
+    var difficulty: String = "Easy"
+    
     // buttons for squares
     @IBOutlet var buttons: [UIButton]!
     
@@ -63,7 +71,22 @@ class ViewController: UIViewController {
         meateaterLabel.isHidden = true
         planteaterLabel.isHidden = true
         playAgainButton.isHidden = true
+        
+       
+        print(difficulty)
+        if onePlayer == true {
+            if onePlayer == true && piece == "planteater" {
+                // computer playes first move
+                locked = true
+                computerPlayer = 0
+                _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(computerPlays), userInfo: nil, repeats: false)
+            } else {
+                computerPlayer = 1
+            }
+        }
+        
     }
+    
     
     @IBAction func playAgainAction(_ sender: Any) {
         // reset board
@@ -92,9 +115,133 @@ class ViewController: UIViewController {
         playAgainButton.isHidden = true
         drawLabel.isHidden = true
         movesRemaining = 9
+        
+        if onePlayer == true && piece == "planteater" {
+            // computer playes first move
+            locked = true
+            computerPlayer = 0
+            _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(computerPlays), userInfo: nil, repeats: false)
+        } else {
+            computerPlayer = 1
+            locked = false
+        }
+        
+    }
+    
+    func showWinner() {
+        // show "WINS" label
+        winner[player].isHidden = false
+        
+        // remove the loser's image
+        indicator[(player+1)%2].alpha = 0
+        
+        // dim all squares
+        for button in buttons {
+            button.alpha = 0.2
+        }
+
+        // highlight only the winning squares
+        for position in winningPositions[wonPosition] {
+            buttons[position].alpha = 1
+        }
+        
+        playAgainButton.isHidden = false
+    }
+    
+    func switchPlayer() {
+        // switch player
+        counter+=1
+        indicator[player].alpha = 0.2
+        indicator[(player+1)%2].alpha = 1
+        player = (player+1)%2
+        movesRemaining -= 1
+        
+        if onePlayer == true {
+            if locked == true {
+                locked = false
+            }
+            else {
+                locked = true
+                _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(computerPlays), userInfo: nil, repeats: false)
+
+            }
+        }
+        
+        
+        
+        if movesRemaining == 0 {
+            // draw
+            playAgainButton.isHidden = false
+            drawLabel.isHidden = false
+            
+            // dim all buttons
+            for button in buttons {
+                button.alpha = 0.2
+            }
+            
+        }
+    }
+    
+    func randomMove() -> Int {
+        var possiblePositionsToPlay: [Int] = []
+        
+        for index in 0..<gameboard.count - 1 {
+        
+            if gameboard[index] == "" {
+                // add possible slots
+                    possiblePositionsToPlay.append(index)
+                    }
+                    else {
+                        // draw
+                    }
+            }
+        
+        return possiblePositionsToPlay.randomElement()!
+    
+    }
+    
+    @objc func computerPlays() {
+        // find index
+        var position = 0
+        
+        // easy
+        if difficulty == "Easy" {
+            position = randomMove()
+        }
+        
+        else if difficulty == "Medium" {
+            let number = Int.random(in: 0..<10)
+            if number < 7 {
+                position = randomMove()
+            }
+            else {
+                position = bestMove()
+            }
+        }
+        else {
+            position = bestMove()
+        }
+        
+        buttons[position].setImage(UIImage(named: players[player]), for: .normal)
+
+        gameboard[position] = players[player]
+
+        buttons[position].isUserInteractionEnabled = false
+        
+        if checkForWinner() {
+            showWinner()
+        }
+        else {
+            switchPlayer()
+        }
     }
     
     @IBAction func selectSquareAction(_ sender: AnyObject) {
+        
+        counter+=1
+        if locked == true {
+            return
+        }
         
         // set image to current player's image
         sender.setImage(UIImage(named: players[player]), for: .normal)
@@ -108,46 +255,10 @@ class ViewController: UIViewController {
         
         // check for winner
         if checkForWinner() {
-            
-            // show "WINS" label
-            winner[player].isHidden = false
-            
-            // remove the loser's image
-            indicator[(player+1)%2].alpha = 0
-            
-            // dim all squares
-            for button in buttons {
-                button.alpha = 0.2
-            }
-
-            // highlight only the winning squares
-            for position in winningPositions[wonPosition] {
-                buttons[position].alpha = 1
-            }
-            
-            playAgainButton.isHidden = false
-        
-            
+            showWinner()
         }
         else {
-            
-            // switch player
-            indicator[player].alpha = 0.2
-            indicator[(player+1)%2].alpha = 1
-            player = (player+1)%2
-            movesRemaining -= 1
-            
-            if movesRemaining == 0 {
-                // draw
-                playAgainButton.isHidden = false
-                drawLabel.isHidden = false
-                
-                // dim all buttons
-                for button in buttons {
-                    button.alpha = 0.2
-                }
-                
-            }
+            switchPlayer()
         }
     }
     
@@ -174,6 +285,143 @@ class ViewController: UIViewController {
         return false
     }
     
+    func score(gameboard:[String]) -> Int {
+        let player = (computerPlayer+1)%2
+        if didWin(player: player) {
+            return 100
+        }
+        else if didWin(player: computerPlayer) {
+           return -100
+        }
+        else {
+            return 0
+        }
+    }
+    
+    func didWin(player: Int) -> Bool {
+        
+        for (index, winningPosition) in winningPositions.enumerated() {
+            
+            // keeps track of how many squares are used in a winning position
+            var counter = 0
+
+            for position in winningPosition {
+                if gameboard[position] == players[player] {
+                    counter += 1
+                }
+            }
+            if counter == 3 {
+                wonPosition = index
+                return true
+            }
+        }
+        return false
+    }
+    
+    func bestMove() -> Int{
+        
+        var bestScore = -1000
+        var bestMove = 0
+        
+        // computer plays
+       
+        for i in 0..<9 {
+            if gameboard[i] == "" {
+                gameboard[i] = players[computerPlayer]
+                let score = minimax(board: gameboard, depth: 0, isMaximizing: false )
+                gameboard[i] = ""
+//                print(i, score)
+                if (score > bestScore) {
+                    bestMove = i
+                    bestScore = score
+                }
+            }
+            
+        }
+        print(bestMove)
+        return bestMove
+        
+    }
+    
+    func checkForDraw() -> Bool {
+        for i in 0..<9 {
+            if gameboard[i] == "" {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func minimax(board: [String], depth: Int, isMaximizing: Bool) -> Int {
+    
+        if checkForWinnerV2(p: computerPlayer) {
+            print("winner")
+            return 10
+        }
+        else if checkForWinnerV2(p: (computerPlayer+1)%2) {
+            print("loser")
+            return -10
+        }
+        else if checkForDraw() {
+            return 0
+        }
+        
+        print(depth)
+        
+        if (isMaximizing) {
+            var bestScore = -1000
+            for i in 0..<9 {
+                if gameboard[i] == "" {
+                    gameboard[i] = players[computerPlayer]
+                    let score = minimax(board: gameboard, depth: depth+1, isMaximizing: false)
+                    gameboard[i] = ""
+                    bestScore = max(score, bestScore)
+                }
+            }
+            
+            return bestScore
+        }
+        
+        else {
+            var bestScore = 1000
+            for i in 0..<9 {
+                if gameboard[i] == "" {
+                    gameboard[i] = players[(computerPlayer+1)%2]
+                    let score = minimax(board: gameboard, depth: depth+1, isMaximizing: true)
+                    gameboard[i] = ""
+                    bestScore = min(score, bestScore)
+                }
+            }
+            
+            return bestScore
+        }
+        
+    }
+    
+    func checkForWinnerV2(p: Int) -> Bool {
+        // 8 winning positions
+        
+              
+        for (index, winningPosition) in winningPositions.enumerated() {
+            
+            // keeps track of how many squares are used in a winning position
+            var counter = 0
+
+            for position in winningPosition {
+                if gameboard[position] == players[p] {
+                    counter += 1
+                }
+            }
+            if counter == 3 {
+                wonPosition = index
+                return true
+            }
+            
+            
+        }
+        
+        return false
+    }
 
 }
 

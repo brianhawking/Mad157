@@ -15,6 +15,9 @@
 		F795B8D926DBF714005D8C3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F795B8D726DBF714005D8C3B /* LaunchScreen.storyboard */; };
 		F795B8E426DBF715005D8C3B /* TicTacToeBrianVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F795B8E326DBF715005D8C3B /* TicTacToeBrianVTests.swift */; };
 		F795B8EF26DBF715005D8C3B /* TicTacToeBrianVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F795B8EE26DBF715005D8C3B /* TicTacToeBrianVUITests.swift */; };
+		F7F623C826EBA83300260AE4 /* OneOrTwoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F623C726EBA83300260AE4 /* OneOrTwoPlayerViewController.swift */; };
+		F7F623CA26EBA9DA00260AE4 /* ChoosePieceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F623C926EBA9DA00260AE4 /* ChoosePieceViewController.swift */; };
+		F7F623CC26EC003B00260AE4 /* ChooseDifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F623CB26EC003B00260AE4 /* ChooseDifficultyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		F795B8EA26DBF715005D8C3B /* TicTacToeBrianVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeBrianVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F795B8EE26DBF715005D8C3B /* TicTacToeBrianVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeBrianVUITests.swift; sourceTree = "<group>"; };
 		F795B8F026DBF715005D8C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7F623C726EBA83300260AE4 /* OneOrTwoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneOrTwoPlayerViewController.swift; sourceTree = "<group>"; };
+		F7F623C926EBA9DA00260AE4 /* ChoosePieceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePieceViewController.swift; sourceTree = "<group>"; };
+		F7F623CB26EC003B00260AE4 /* ChooseDifficultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDifficultyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				F795B8CE26DBF713005D8C3B /* SceneDelegate.swift */,
 				F795B8D026DBF713005D8C3B /* ViewController.swift */,
 				F795B8D226DBF713005D8C3B /* Main.storyboard */,
+				F7F623CB26EC003B00260AE4 /* ChooseDifficultyViewController.swift */,
+				F7F623C926EBA9DA00260AE4 /* ChoosePieceViewController.swift */,
+				F7F623C726EBA83300260AE4 /* OneOrTwoPlayerViewController.swift */,
 				F795B8D526DBF714005D8C3B /* Assets.xcassets */,
 				F795B8D726DBF714005D8C3B /* LaunchScreen.storyboard */,
 				F795B8DA26DBF714005D8C3B /* Info.plist */,
@@ -260,6 +269,9 @@
 			files = (
 				F795B8D126DBF713005D8C3B /* ViewController.swift in Sources */,
 				F795B8CD26DBF713005D8C3B /* AppDelegate.swift in Sources */,
+				F7F623CC26EC003B00260AE4 /* ChooseDifficultyViewController.swift in Sources */,
+				F7F623C826EBA83300260AE4 /* OneOrTwoPlayerViewController.swift in Sources */,
+				F7F623CA26EBA9DA00260AE4 /* ChoosePieceViewController.swift in Sources */,
 				F795B8CF26DBF713005D8C3B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
