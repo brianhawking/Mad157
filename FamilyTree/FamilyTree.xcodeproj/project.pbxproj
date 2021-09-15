@@ -111,11 +111,11 @@
 			children = (
 				F7B554A426EE8F7F009B7818 /* AppDelegate.swift */,
 				F7B554A626EE8F7F009B7818 /* SceneDelegate.swift */,
-				F7B554A826EE8F7F009B7818 /* ViewController.swift */,
 				F7C3DB1D26EEEE24006814A1 /* memberCell.swift */,
 				F7B554AA26EE8F7F009B7818 /* Main.storyboard */,
 				F7C253BD26F0ECCD00D2E1F7 /* Recipe.swift */,
 				F7C253BB26F0E8E700D2E1F7 /* TitleViewController.swift */,
+				F7B554A826EE8F7F009B7818 /* ViewController.swift */,
 				F7EE555D26F0380000D60EBC /* ViewInfoController.swift */,
 				F7B554D426EE9604009B7818 /* AddMemberController.swift */,
 				F7B554AD26EE8F81009B7818 /* Assets.xcassets */,

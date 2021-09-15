@@ -9,7 +9,7 @@ import UIKit
 
 class AddMemberController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UITextViewDelegate {
 
-    var addType: String = "Child"
+    var addType: String = ""
     @IBOutlet weak var addTypeLabel: UILabel!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -73,7 +73,19 @@ class AddMemberController: UIViewController, UITableViewDelegate, UITableViewDat
         id = available[indexPath.row].id
         
     }
-
+ 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return available.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memberCell1", for: indexPath)
+       
+        cell.textLabel?.text = available[indexPath.row].name
+        
+        return cell
+    }
+    
     @IBAction func saveAction(_ sender: Any) {
         
         if nameTextView.text == "" {
@@ -86,19 +98,6 @@ class AddMemberController: UIViewController, UITableViewDelegate, UITableViewDat
         completionHandler?(name, id, description)
         
         dismiss(animated: true, completion: nil)
-    }
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return available.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "memberCell1", for: indexPath)
-       
-        cell.textLabel?.text = available[indexPath.row].name
-        
-        return cell
     }
     
     

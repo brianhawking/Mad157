@@ -165,13 +165,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 }
                 else {
                     newID = id1
+                    self.persons[newID].name = name
+                    self.persons[newID].description = description
                 }
                 
-                if self.persons[self.id].partner.contains(newID) || self.persons[self.id].children.contains(newID) ||
-                    self.persons[self.id].siblings.contains(newID) ||
-                    self.persons[self.id].parents.contains(newID) {
-                    return
-                }
+                
+                // linking
                 
                 if self.addType == "Partner" {
                     self.persons[self.id].partner.append(newID)
