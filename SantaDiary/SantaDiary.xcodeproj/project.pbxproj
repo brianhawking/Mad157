@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F7484A7C26E8E8F9008B36E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7484A7B26E8E8F9008B36E1 /* AppDelegate.swift */; };
 		F7484A7E26E8E8F9008B36E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7484A7D26E8E8F9008B36E1 /* SceneDelegate.swift */; };
-		F7484A8026E8E8F9008B36E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7484A7F26E8E8F9008B36E1 /* ViewController.swift */; };
+		F7484A8026E8E8F9008B36E1 /* ListofProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7484A7F26E8E8F9008B36E1 /* ListofProfiles.swift */; };
 		F7484A8326E8E8F9008B36E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7484A8126E8E8F9008B36E1 /* Main.storyboard */; };
 		F7484A8526E8E8FA008B36E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7484A8426E8E8FA008B36E1 /* Assets.xcassets */; };
 		F7484A8826E8E8FA008B36E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7484A8626E8E8FA008B36E1 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,8 @@
 		F7484AB026E91251008B36E1 /* ProfileListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7484AAE26E91251008B36E1 /* ProfileListTableViewCell.xib */; };
 		F7484AB226E928D0008B36E1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7484AB126E928D0008B36E1 /* ProfileViewController.swift */; };
 		F7D4750426EA5ADB0052A0EA /* NiceOrNaughty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */; };
+		F7FACC6226F4CD9E00AFF909 /* SantaLettersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FACC6026F4CD9E00AFF909 /* SantaLettersCell.swift */; };
+		F7FACC6326F4CD9E00AFF909 /* SantaLettersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7FACC6126F4CD9E00AFF909 /* SantaLettersCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,7 @@
 		F7484A7826E8E8F9008B36E1 /* SantaDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SantaDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7484A7B26E8E8F9008B36E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7484A7D26E8E8F9008B36E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7484A7F26E8E8F9008B36E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7484A7F26E8E8F9008B36E1 /* ListofProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListofProfiles.swift; sourceTree = "<group>"; };
 		F7484A8226E8E8F9008B36E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7484A8426E8E8FA008B36E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7484A8726E8E8FA008B36E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		F7484AAE26E91251008B36E1 /* ProfileListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileListTableViewCell.xib; sourceTree = "<group>"; };
 		F7484AB126E928D0008B36E1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceOrNaughty.swift; sourceTree = "<group>"; };
+		F7FACC6026F4CD9E00AFF909 /* SantaLettersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantaLettersCell.swift; sourceTree = "<group>"; };
+		F7FACC6126F4CD9E00AFF909 /* SantaLettersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SantaLettersCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,14 +111,12 @@
 		F7484A7A26E8E8F9008B36E1 /* SantaDiary */ = {
 			isa = PBXGroup;
 			children = (
+				F7FACC5F26F4CAC200AFF909 /* ViewControllers */,
 				F7D4750026EA49BE0052A0EA /* Views */,
 				F7484AB326E92F28008B36E1 /* Custom TableView Cells */,
 				F7484A7B26E8E8F9008B36E1 /* AppDelegate.swift */,
 				F7484A7D26E8E8F9008B36E1 /* SceneDelegate.swift */,
-				F7484A7F26E8E8F9008B36E1 /* ViewController.swift */,
 				F7484A8126E8E8F9008B36E1 /* Main.storyboard */,
-				F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */,
-				F7484AB126E928D0008B36E1 /* ProfileViewController.swift */,
 				F7484A8426E8E8FA008B36E1 /* Assets.xcassets */,
 				F7484A8626E8E8FA008B36E1 /* LaunchScreen.storyboard */,
 				F7484A8926E8E8FA008B36E1 /* Info.plist */,
@@ -145,6 +147,8 @@
 			children = (
 				F7484AAD26E91251008B36E1 /* ProfileListTableViewCell.swift */,
 				F7484AAE26E91251008B36E1 /* ProfileListTableViewCell.xib */,
+				F7FACC6026F4CD9E00AFF909 /* SantaLettersCell.swift */,
+				F7FACC6126F4CD9E00AFF909 /* SantaLettersCell.xib */,
 			);
 			path = "Custom TableView Cells";
 			sourceTree = "<group>";
@@ -154,6 +158,16 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F7FACC5F26F4CAC200AFF909 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7484A7F26E8E8F9008B36E1 /* ListofProfiles.swift */,
+				F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */,
+				F7484AB126E928D0008B36E1 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7484A8826E8E8FA008B36E1 /* LaunchScreen.storyboard in Resources */,
+				F7FACC6326F4CD9E00AFF909 /* SantaLettersCell.xib in Resources */,
 				F7484AB026E91251008B36E1 /* ProfileListTableViewCell.xib in Resources */,
 				F7484A8526E8E8FA008B36E1 /* Assets.xcassets in Resources */,
 				F7484A8326E8E8F9008B36E1 /* Main.storyboard in Resources */,
@@ -287,8 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FACC6226F4CD9E00AFF909 /* SantaLettersCell.swift in Sources */,
 				F7D4750426EA5ADB0052A0EA /* NiceOrNaughty.swift in Sources */,
-				F7484A8026E8E8F9008B36E1 /* ViewController.swift in Sources */,
+				F7484A8026E8E8F9008B36E1 /* ListofProfiles.swift in Sources */,
 				F7484AAF26E91251008B36E1 /* ProfileListTableViewCell.swift in Sources */,
 				F7484AB226E928D0008B36E1 /* ProfileViewController.swift in Sources */,
 				F7484A7C26E8E8F9008B36E1 /* AppDelegate.swift in Sources */,
