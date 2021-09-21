@@ -9,7 +9,7 @@ import UIKit
 
 class StopwatchController: UIViewController {
     
-    var timer: Timer!
+    var timer = Timer()
     var timerOn = false
     
     @IBOutlet weak var cancelButton: UIButton!
@@ -35,7 +35,9 @@ class StopwatchController: UIViewController {
     }
 
     @IBAction func stopAction(_ sender: UIButton) {
+    
         timer.invalidate()
+        timerOn = false
         startButton.setTitle("Start", for: .normal)
         timeInSecondsElapsed = 0
         stopwatchLabel.text = "00:00:00"
@@ -49,7 +51,9 @@ class StopwatchController: UIViewController {
     
     @IBAction func startAction(_ sender: Any) {
         
+        
         if timerOn == false {
+            updateCountdownTimer()
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                 self.updateCountdownTimer()
             }

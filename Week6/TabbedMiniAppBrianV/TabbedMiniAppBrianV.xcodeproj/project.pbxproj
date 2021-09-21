@@ -18,6 +18,7 @@
 		F757FAC426FA269D001A6A1A /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F757FAC326FA269D001A6A1A /* TimerController.swift */; };
 		F757FAC626FA3989001A6A1A /* StopwatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F757FAC526FA3989001A6A1A /* StopwatchController.swift */; };
 		F757FAC826FA3EAE001A6A1A /* ReminderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F757FAC726FA3EAE001A6A1A /* ReminderController.swift */; };
+		F7C19ED826FA73700056AD69 /* TitleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C19ED726FA73700056AD69 /* TitleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F757FAC326FA269D001A6A1A /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		F757FAC526FA3989001A6A1A /* StopwatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchController.swift; sourceTree = "<group>"; };
 		F757FAC726FA3EAE001A6A1A /* ReminderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderController.swift; sourceTree = "<group>"; };
+		F7C19ED726FA73700056AD69 /* TitleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				F757FA9526FA236D001A6A1A /* SceneDelegate.swift */,
 				F757FA9726FA236D001A6A1A /* ViewController.swift */,
 				F757FA9926FA236D001A6A1A /* Main.storyboard */,
+				F7C19ED726FA73700056AD69 /* TitleController.swift */,
 				F757FAC726FA3EAE001A6A1A /* ReminderController.swift */,
 				F757FAC526FA3989001A6A1A /* StopwatchController.swift */,
 				F757FAC326FA269D001A6A1A /* TimerController.swift */,
@@ -269,6 +272,7 @@
 			files = (
 				F757FA9826FA236D001A6A1A /* ViewController.swift in Sources */,
 				F757FAC426FA269D001A6A1A /* TimerController.swift in Sources */,
+				F7C19ED826FA73700056AD69 /* TitleController.swift in Sources */,
 				F757FAC626FA3989001A6A1A /* StopwatchController.swift in Sources */,
 				F757FA9426FA236D001A6A1A /* AppDelegate.swift in Sources */,
 				F757FA9626FA236D001A6A1A /* SceneDelegate.swift in Sources */,

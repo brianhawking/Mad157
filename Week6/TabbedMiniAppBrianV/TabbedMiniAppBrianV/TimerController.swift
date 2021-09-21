@@ -70,7 +70,9 @@ class TimerController: UIViewController {
                 timerStopped = false
                 timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                     self.updateCountdownTimer()
-                    if self.timeLeftInSeconds == 0 {
+                    if self.timeLeftInSeconds == -1 {
+                        self.countdownLabel.text = "00:00"
+                    
                         timer.invalidate()
                         
                         // show alert
@@ -84,6 +86,7 @@ class TimerController: UIViewController {
                         alert.addAction(okAction)
                         
                         self.present(alert, animated: true, completion: nil)
+                        self.cancelTimer(Any?.self)
                     }
                 }
             }
@@ -102,10 +105,11 @@ class TimerController: UIViewController {
             print(timerPicker.countDownDuration)
             timeLeftInSeconds = Int(timerPicker.countDownDuration)
         
-            
+            updateCountdownTimer()
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                 self.updateCountdownTimer()
-                if self.timeLeftInSeconds == 0 {
+                if self.timeLeftInSeconds == -1 {
+                    self.countdownLabel.text = "00:00"
                     timer.invalidate()
                     
                     // show alert
@@ -119,6 +123,8 @@ class TimerController: UIViewController {
                     alert.addAction(okAction)
                     
                     self.present(alert, animated: true, completion: nil)
+                    self.cancelTimer(Any?.self)
+                
                 }
             }
             

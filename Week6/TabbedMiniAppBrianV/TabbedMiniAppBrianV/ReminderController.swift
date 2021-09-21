@@ -19,16 +19,13 @@ class ReminderController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        datePicker.setValue(UIColor.white, forKey: "textColor")
         
         dateFormatter.timeStyle = .short
         dateFormatter.dateStyle = .short
         
-        let whitePlaceholderText = NSAttributedString(string: "Title", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        let grayPlaceholderText = NSAttributedString(string: "Title", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
 
-        titleTextField.attributedPlaceholder = whitePlaceholderText
+        titleTextField.attributedPlaceholder = grayPlaceholderText
         titleTextField.textColor = UIColor.white
         
         
@@ -47,7 +44,6 @@ class ReminderController: UIViewController {
         }
         
         let selectedDate: String = dateFormatter.string(from: datePicker.date)
-    
         
         let alert = UIAlertController(title: "Confirm Event", message: "\(titleTextField.text!) on \(selectedDate)", preferredStyle: .alert)
         
