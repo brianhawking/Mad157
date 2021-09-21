@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ij0-0L-XyV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aXR-LM-11P">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ij0-0L-XyV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RQ3-dy-gCQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VtI-YN-25v" kind="relationship" relationship="viewControllers" id="fKC-Ke-bOr"/>
+                        <segue destination="oCh-os-zgq" kind="relationship" relationship="viewControllers" id="wE0-in-Lan"/>
+                        <segue destination="NDj-Sb-04c" kind="relationship" relationship="viewControllers" id="GcC-Gz-ZGo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wN-NF-iL3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-186" y="75"/>
+        </scene>
+        <!--Stopwatch-->
+        <scene sceneID="ISs-M4-bXS">
+            <objects>
+                <viewController id="VtI-YN-25v" customClass="StopwatchController" customModule="TabbedMiniAppBrianV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FSo-QU-0XR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hSN-Yr-X9x">
+                                <rect key="frame" x="49.5" y="672" width="315" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0z-P7-0Ej">
+                                        <rect key="frame" x="0.0" y="0.0" width="132.5" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="  Cancel  "/>
+                                        <connections>
+                                            <action selector="cancelTimer:" destination="oCh-os-zgq" eventType="touchUpInside" id="0NJ-yW-HQZ"/>
+                                            <action selector="stopAction:" destination="VtI-YN-25v" eventType="touchUpInside" id="bCX-M1-m1H"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9a-k3-RMK">
+                                        <rect key="frame" x="182.5" y="0.0" width="132.5" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="    Start    "/>
+                                        <connections>
+                                            <action selector="startAction:" destination="VtI-YN-25v" eventType="touchUpInside" id="Dug-x0-IOP"/>
+                                            <action selector="startTimer:" destination="oCh-os-zgq" eventType="touchUpInside" id="Sgs-w3-t2b"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgA-Md-AE8">
+                                <rect key="frame" x="108" y="307.5" width="198.5" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="apO-cb-rWq"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hSN-Yr-X9x" firstAttribute="centerX" secondItem="FSo-QU-0XR" secondAttribute="centerX" id="5X2-pL-4pf"/>
+                            <constraint firstItem="hSN-Yr-X9x" firstAttribute="width" secondItem="FSo-QU-0XR" secondAttribute="width" multiplier="0.76" id="Vfd-E0-uXA"/>
+                            <constraint firstItem="RgA-Md-AE8" firstAttribute="centerY" secondItem="FSo-QU-0XR" secondAttribute="centerY" multiplier="0.75" id="Z8S-4P-sIm"/>
+                            <constraint firstItem="apO-cb-rWq" firstAttribute="bottom" secondItem="hSN-Yr-X9x" secondAttribute="bottom" constant="100" id="dcN-38-lj8"/>
+                            <constraint firstItem="RgA-Md-AE8" firstAttribute="centerX" secondItem="FSo-QU-0XR" secondAttribute="centerX" id="qTI-aZ-Uvr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stopwatch" image="stopwatch" catalog="system" id="fBB-Rp-K1z"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="O0z-P7-0Ej" id="aya-Ri-8aH"/>
+                        <outlet property="startButton" destination="f9a-k3-RMK" id="1Er-UX-JCi"/>
+                        <outlet property="stopwatchLabel" destination="RgA-Md-AE8" id="a5V-YH-7Eo"/>
+                        <outletCollection property="buttons" destination="O0z-P7-0Ej" collectionClass="NSMutableArray" id="iyW-qo-uVb"/>
+                        <outletCollection property="buttons" destination="f9a-k3-RMK" collectionClass="NSMutableArray" id="Vm6-Bc-J4V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dJ-dz-kvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1299" y="813"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="g0j-lM-E6P">
+            <objects>
+                <viewController id="oCh-os-zgq" customClass="TimerController" customModule="TabbedMiniAppBrianV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tag-la-3Bw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAc-Hb-W5t">
+                                <rect key="frame" x="47" y="250.5" width="320" height="216"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bcN-IC-uyy">
+                                <rect key="frame" x="49.5" y="672" width="315" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjp-Nc-5RY">
+                                        <rect key="frame" x="0.0" y="0.0" width="132.5" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="  Cancel  "/>
+                                        <connections>
+                                            <action selector="cancelTimer:" destination="oCh-os-zgq" eventType="touchUpInside" id="yPK-b9-aBt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zq-cK-Zg5">
+                                        <rect key="frame" x="182.5" y="0.0" width="132.5" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="    Start    "/>
+                                        <connections>
+                                            <action selector="startTimer:" destination="oCh-os-zgq" eventType="touchUpInside" id="mh1-qx-biH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYj-Ws-rgn">
+                                <rect key="frame" x="57" y="186" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afD-Iu-ATA">
+                                        <rect key="frame" x="51" y="121.5" width="198.5" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7fW-V8-hHT"/>
+                                    <constraint firstItem="afD-Iu-ATA" firstAttribute="centerY" secondItem="MYj-Ws-rgn" secondAttribute="centerY" id="HpH-wU-dNs"/>
+                                    <constraint firstAttribute="width" constant="300" id="hc4-KN-qLw"/>
+                                    <constraint firstItem="afD-Iu-ATA" firstAttribute="centerX" secondItem="MYj-Ws-rgn" secondAttribute="centerX" id="yFo-ZK-q01"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v0J-kz-mIL"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZAc-Hb-W5t" firstAttribute="centerY" secondItem="Tag-la-3Bw" secondAttribute="centerY" multiplier="0.8" id="0Ru-hC-R3W"/>
+                            <constraint firstItem="bcN-IC-uyy" firstAttribute="centerX" secondItem="Tag-la-3Bw" secondAttribute="centerX" id="94f-t6-HWT"/>
+                            <constraint firstItem="MYj-Ws-rgn" firstAttribute="centerY" secondItem="Tag-la-3Bw" secondAttribute="centerY" multiplier="0.75" id="CRo-7X-QXx"/>
+                            <constraint firstItem="ZAc-Hb-W5t" firstAttribute="centerX" secondItem="Tag-la-3Bw" secondAttribute="centerX" id="Cn5-wB-6b5"/>
+                            <constraint firstItem="bcN-IC-uyy" firstAttribute="width" secondItem="Tag-la-3Bw" secondAttribute="width" multiplier="0.76" id="YDa-Y3-WPn"/>
+                            <constraint firstItem="v0J-kz-mIL" firstAttribute="bottom" secondItem="bcN-IC-uyy" secondAttribute="bottom" constant="100" id="u3C-5n-SfG"/>
+                            <constraint firstItem="MYj-Ws-rgn" firstAttribute="centerX" secondItem="Tag-la-3Bw" secondAttribute="centerX" id="xRK-rv-VWg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="FZF-KT-9hu"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="zjp-Nc-5RY" id="455-7k-qrD"/>
+                        <outlet property="countdownLabel" destination="afD-Iu-ATA" id="ez9-Kf-vYq"/>
+                        <outlet property="countdownView" destination="MYj-Ws-rgn" id="Han-3P-67s"/>
+                        <outlet property="startButton" destination="9Zq-cK-Zg5" id="KYy-k4-0Tp"/>
+                        <outlet property="timerPicker" destination="ZAc-Hb-W5t" id="Tkw-LH-qv8"/>
+                        <outletCollection property="buttons" destination="zjp-Nc-5RY" collectionClass="NSMutableArray" id="tgZ-PR-XhU"/>
+                        <outletCollection property="buttons" destination="9Zq-cK-Zg5" collectionClass="NSMutableArray" id="RkD-9C-7pn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEd-Kx-poC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410.14492753623193" y="812.94642857142856"/>
+        </scene>
+        <!--Add Event-->
+        <scene sceneID="cP1-o1-GYI">
+            <objects>
+                <viewController id="NDj-Sb-04c" customClass="ReminderController" customModule="TabbedMiniAppBrianV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v9X-Ol-tqP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whV-mO-N82">
+                                <rect key="frame" x="20" y="350" width="374" height="38.5"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rd-bm-8O4">
+                                <rect key="frame" x="20" y="64" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfJ-8d-frq">
+                                <rect key="frame" x="149.5" y="672" width="115" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="      Save      "/>
+                                <connections>
+                                    <action selector="saveAction:" destination="NDj-Sb-04c" eventType="touchUpInside" id="0Kr-ER-7iN"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="fft-Ws-RTA">
+                                <rect key="frame" x="30" y="418.5" width="354" height="59"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9s-2h-dxN">
+                                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="QtM-SW-1OS">
+                                        <rect key="frame" x="107.5" y="0.0" width="246.5" height="59"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="59" id="TVP-X5-LE8"/>
+                                        </constraints>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RcH-HW-z3B"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="whV-mO-N82" firstAttribute="leading" secondItem="RcH-HW-z3B" secondAttribute="leading" constant="20" id="4va-8f-jS4"/>
+                            <constraint firstItem="3rd-bm-8O4" firstAttribute="top" secondItem="RcH-HW-z3B" secondAttribute="top" constant="20" id="5mC-H5-7dO"/>
+                            <constraint firstItem="RcH-HW-z3B" firstAttribute="trailing" secondItem="whV-mO-N82" secondAttribute="trailing" constant="20" id="Ibw-zY-S4b"/>
+                            <constraint firstItem="RcH-HW-z3B" firstAttribute="trailing" secondItem="3rd-bm-8O4" secondAttribute="trailing" constant="20" id="JrM-Lo-46B"/>
+                            <constraint firstItem="3rd-bm-8O4" firstAttribute="centerX" secondItem="v9X-Ol-tqP" secondAttribute="centerX" id="NxI-Os-TI1"/>
+                            <constraint firstItem="RcH-HW-z3B" firstAttribute="bottom" secondItem="IfJ-8d-frq" secondAttribute="bottom" constant="100" id="SqH-lN-0Ih"/>
+                            <constraint firstItem="fft-Ws-RTA" firstAttribute="centerX" secondItem="v9X-Ol-tqP" secondAttribute="centerX" id="W2V-1X-fKw"/>
+                            <constraint firstItem="fft-Ws-RTA" firstAttribute="centerY" secondItem="v9X-Ol-tqP" secondAttribute="centerY" id="WWR-3o-EkV"/>
+                            <constraint firstItem="fft-Ws-RTA" firstAttribute="leading" secondItem="RcH-HW-z3B" secondAttribute="leading" constant="30" id="Yb3-qd-fgY"/>
+                            <constraint firstItem="RcH-HW-z3B" firstAttribute="trailing" secondItem="fft-Ws-RTA" secondAttribute="trailing" constant="30" id="hee-K5-5me"/>
+                            <constraint firstItem="IfJ-8d-frq" firstAttribute="centerX" secondItem="v9X-Ol-tqP" secondAttribute="centerX" id="oZa-af-gGm"/>
+                            <constraint firstItem="fft-Ws-RTA" firstAttribute="top" secondItem="whV-mO-N82" secondAttribute="bottom" constant="30" id="s7i-6f-ffK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Event" image="calendar" catalog="system" id="U9M-L9-R2r"/>
+                    <connections>
+                        <outlet property="datePicker" destination="QtM-SW-1OS" id="Ail-lb-ku9"/>
+                        <outlet property="saveButton" destination="IfJ-8d-frq" id="ji7-4L-h8h"/>
+                        <outlet property="titleTextField" destination="whV-mO-N82" id="qVj-uG-ETQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2Z-yG-6p3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382.60869565217394" y="816.96428571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="stopwatch" catalog="system" width="121" height="128"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
