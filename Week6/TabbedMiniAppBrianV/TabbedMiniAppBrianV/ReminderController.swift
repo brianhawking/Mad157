@@ -63,6 +63,20 @@ class ReminderController: UIViewController {
     
     func confirmEvent() {
         print("CONFIRMED")
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueManager().LoginSuccessSegue {
+            // do stuff
+        }
     }
     
 }
+
+
+struct SegueManager {
+    var LoginSuccessSegue = "LoginSuccessSugue"
+}
+
+

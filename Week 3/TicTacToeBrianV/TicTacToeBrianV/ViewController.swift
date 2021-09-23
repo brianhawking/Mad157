@@ -223,6 +223,12 @@ class ViewController: UIViewController {
         }
         
         buttons[position].setImage(UIImage(named: players[player]), for: .normal)
+        
+        UIView.transition(with: buttons[position], duration: 0.3, options: [.transitionFlipFromLeft], animations: {
+            self.buttons[position].setImage(UIImage(named: self.players[self.player]), for: .normal)
+            self.buttons[position].isUserInteractionEnabled = false
+            
+        }, completion: nil)
 
         gameboard[position] = players[player]
 
@@ -232,11 +238,13 @@ class ViewController: UIViewController {
             showWinner()
         }
         else {
-            switchPlayer()
+            _ = Timer.scheduledTimer(withTimeInterval: 0.8, repeats: false, block: { _ in
+                self.switchPlayer()
+            })
         }
     }
     
-    @IBAction func selectSquareAction(_ sender: AnyObject) {
+    @IBAction func selectSquareAction(_ sender: UIButton) {
         
         counter+=1
         if locked == true {
@@ -244,7 +252,13 @@ class ViewController: UIViewController {
         }
         
         // set image to current player's image
-        sender.setImage(UIImage(named: players[player]), for: .normal)
+//        sender.setImage(UIImage(named: players[player]), for: .normal)
+        
+        UIView.transition(with: sender, duration: 0.3, options: [.transitionFlipFromLeft], animations: {
+            sender.setImage(UIImage(named: self.players[self.player]), for: .normal)
+            sender.isUserInteractionEnabled = false
+            
+        }, completion: nil)
         
         // update gameboard
         gameboard[sender.tag] = players[player]
@@ -258,7 +272,12 @@ class ViewController: UIViewController {
             showWinner()
         }
         else {
-            switchPlayer()
+            
+            _ = Timer.scheduledTimer(withTimeInterval: 0.8, repeats: false, block: { _ in
+                self.switchPlayer()
+            })
+            
+           
         }
     }
     
