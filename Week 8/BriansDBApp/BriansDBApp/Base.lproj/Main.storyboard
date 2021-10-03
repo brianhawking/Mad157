@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BriansDBApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lucas-leon-IsS7vIQa898-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="AaK-PF-Xjy">
+                                <rect key="frame" x="20" y="264" width="374" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="Vw0-5o-cnb"/>
+                                    <constraint firstAttribute="width" constant="374" id="hCb-5g-JhP"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="about" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iws-d1-Sar">
+                                <rect key="frame" x="20" y="194" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="63J-cF-nyL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DvB-T4-bqt">
+                                <rect key="frame" x="20" y="50" width="374" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwp-CL-9Ox">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="saveRecord"/>
+                                        <connections>
+                                            <action selector="saveRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uNv-Vb-BLu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJN-IO-qHU">
+                                        <rect key="frame" x="212" y="0.0" width="162" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="deleteRecord"/>
+                                        <connections>
+                                            <action selector="deleteRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAH-SJ-mKf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8F6-qh-x6X">
+                                <rect key="frame" x="20" y="814" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AaK-PF-Xjy" firstAttribute="top" secondItem="Iws-d1-Sar" secondAttribute="bottom" constant="20" id="4Wx-sw-F7r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iws-d1-Sar" secondAttribute="trailing" constant="20" id="5kL-XO-WFx"/>
+                            <constraint firstItem="DvB-T4-bqt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dhh-z7-U0L"/>
+                            <constraint firstItem="8F6-qh-x6X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Fcq-kT-tZG"/>
+                            <constraint firstItem="Iws-d1-Sar" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Pge-yQ-2MI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8F6-qh-x6X" secondAttribute="trailing" constant="20" id="RBh-78-8Lo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DvB-T4-bqt" secondAttribute="trailing" constant="20" id="SJY-ML-Kr8"/>
+                            <constraint firstItem="Iws-d1-Sar" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="194" id="aHs-nc-2q1"/>
+                            <constraint firstItem="DvB-T4-bqt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="eLL-ME-zmg"/>
+                            <constraint firstItem="8F6-qh-x6X" firstAttribute="top" secondItem="AaK-PF-Xjy" secondAttribute="bottom" constant="50" id="oOd-vH-JKp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AaK-PF-Xjy" secondAttribute="trailing" constant="20" id="p1M-hA-i90"/>
+                            <constraint firstItem="AaK-PF-Xjy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qjB-Qj-0oQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayDataHere" destination="8F6-qh-x6X" id="Zg1-me-llx"/>
+                        <outlet property="enterGuitarDescription" destination="Iws-d1-Sar" id="4YR-ig-uxZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lucas-leon-IsS7vIQa898-unsplash" width="3444" height="5626"/>
+    </resources>
+</document>
