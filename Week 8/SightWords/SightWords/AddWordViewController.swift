@@ -25,6 +25,7 @@ class AddWordViewController: UIViewController {
         addWordTextField.text = ""
         addWordTextField.becomeFirstResponder()
         
+        // data manager for core data
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         dataManager = appDelegate.persistentContainer.viewContext
         

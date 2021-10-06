@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F7F242C626F4F9BD007F4FF1 /* AddWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F242C526F4F9BD007F4FF1 /* AddWordViewController.swift */; };
+		F7F41346270DF9CC00F09FFA /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F41345270DF9CC00F09FFA /* ColorScheme.swift */; };
 		F7FACC7126F4F21B00AFF909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FACC7026F4F21B00AFF909 /* AppDelegate.swift */; };
 		F7FACC7326F4F21B00AFF909 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FACC7226F4F21B00AFF909 /* SceneDelegate.swift */; };
 		F7FACC7526F4F21B00AFF909 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FACC7426F4F21B00AFF909 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		F7F242C526F4F9BD007F4FF1 /* AddWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordViewController.swift; sourceTree = "<group>"; };
+		F7F41345270DF9CC00F09FFA /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		F7FACC6D26F4F21B00AFF909 /* SightWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SightWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FACC7026F4F21B00AFF909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7FACC7226F4F21B00AFF909 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				F7FACC7426F4F21B00AFF909 /* ViewController.swift */,
 				F7FACC7626F4F21B00AFF909 /* Main.storyboard */,
 				F7F242C526F4F9BD007F4FF1 /* AddWordViewController.swift */,
+				F7F41345270DF9CC00F09FFA /* ColorScheme.swift */,
 				F7FACC7926F4F21E00AFF909 /* Assets.xcassets */,
 				F7FACC7B26F4F21E00AFF909 /* LaunchScreen.storyboard */,
 				F7FACC7E26F4F21E00AFF909 /* Info.plist */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7FACC7526F4F21B00AFF909 /* ViewController.swift in Sources */,
+				F7F41346270DF9CC00F09FFA /* ColorScheme.swift in Sources */,
 				F7FACC7126F4F21B00AFF909 /* AppDelegate.swift in Sources */,
 				F7F242C626F4F9BD007F4FF1 /* AddWordViewController.swift in Sources */,
 				F7FACC7326F4F21B00AFF909 /* SceneDelegate.swift in Sources */,

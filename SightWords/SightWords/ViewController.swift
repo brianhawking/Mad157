@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     var words:[String] = []
     var wordIndex: Int = 0
     
+    var colors = ColorScheme()
+    
     let imageSize:CGSize = CGSize(width: 20, height: 20)
     
     let userDefaults = UserDefaults.standard

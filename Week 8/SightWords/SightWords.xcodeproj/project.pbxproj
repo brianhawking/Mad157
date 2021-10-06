@@ -17,6 +17,8 @@
 		F75207B72709436F00FC415D /* SightWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75207B62709436F00FC415D /* SightWordsTests.swift */; };
 		F75207C22709436F00FC415D /* SightWordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75207C12709436F00FC415D /* SightWordsUITests.swift */; };
 		F75207D027094C9400FC415D /* AddWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75207CF27094C9400FC415D /* AddWordViewController.swift */; };
+		F7F41348270DFD4B00F09FFA /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F41347270DFD4B00F09FFA /* ColorScheme.swift */; };
+		F7F4134A270E046700F09FFA /* ColorSchemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F41349270E046700F09FFA /* ColorSchemeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		F75207C12709436F00FC415D /* SightWordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightWordsUITests.swift; sourceTree = "<group>"; };
 		F75207C32709436F00FC415D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F75207CF27094C9400FC415D /* AddWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordViewController.swift; sourceTree = "<group>"; };
+		F7F41347270DFD4B00F09FFA /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		F7F41349270E046700F09FFA /* ColorSchemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				F752079E2709436E00FC415D /* SceneDelegate.swift */,
 				F75207A02709436E00FC415D /* ViewController.swift */,
 				F75207A22709436E00FC415D /* Main.storyboard */,
+				F7F41349270E046700F09FFA /* ColorSchemeViewController.swift */,
+				F7F41347270DFD4B00F09FFA /* ColorScheme.swift */,
 				F75207CF27094C9400FC415D /* AddWordViewController.swift */,
 				F75207A82709436F00FC415D /* Assets.xcassets */,
 				F75207AA2709436F00FC415D /* LaunchScreen.storyboard */,
@@ -268,6 +274,8 @@
 				F75207A12709436E00FC415D /* ViewController.swift in Sources */,
 				F75207A72709436E00FC415D /* SightWords.xcdatamodeld in Sources */,
 				F752079D2709436E00FC415D /* AppDelegate.swift in Sources */,
+				F7F41348270DFD4B00F09FFA /* ColorScheme.swift in Sources */,
+				F7F4134A270E046700F09FFA /* ColorSchemeViewController.swift in Sources */,
 				F752079F2709436E00FC415D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

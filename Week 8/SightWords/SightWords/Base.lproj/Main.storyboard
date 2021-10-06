@@ -64,11 +64,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Dg-BA-GdU">
-                        <barButtonItem key="leftBarButtonItem" title="Shuffle" id="3hc-TS-a51">
-                            <connections>
-                                <action selector="shuffleAction:" destination="BYZ-38-t0r" id="UMC-Et-IiS"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Colors" id="lHP-UU-pcX">
+                                <connections>
+                                    <action selector="chooseColorScheme:" destination="BYZ-38-t0r" id="GJD-IH-htt"/>
+                                    <segue destination="6B6-iV-bkr" kind="show" id="W1b-le-PQv"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Shuffle" id="3hc-TS-a51">
+                                <connections>
+                                    <action selector="shuffleAction:" destination="BYZ-38-t0r" id="UMC-Et-IiS"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem image="plus" catalog="system" id="f3p-LR-6Jg">
                                 <connections>
@@ -86,11 +94,55 @@
                         <outlet property="cardView" destination="bZa-QJ-JTc" id="zM8-O4-ZVj"/>
                         <outlet property="wordLabel" destination="8K4-Ia-6VH" id="Sad-yQ-iHf"/>
                         <segue destination="QvD-6d-c60" kind="show" identifier="AddWordSegue" id="1nf-ee-u2U"/>
+                        <segue destination="6B6-iV-bkr" kind="show" identifier="ColorSchemeSegue" id="kjW-Jv-d5K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="762.72321428571422" y="73.913043478260875"/>
+        </scene>
+        <!--Color Scheme View Controller-->
+        <scene sceneID="PTN-fg-Fpu">
+            <objects>
+                <viewController id="6B6-iV-bkr" customClass="ColorSchemeViewController" customModule="SightWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="huW-aO-w6w">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hj3-i8-daQ">
+                                <rect key="frame" x="224" y="103.5" width="448" height="207"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2s-kb-sbq">
+                                <rect key="frame" x="288" y="126" width="320" height="162"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2df-T5-ycW"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hj3-i8-daQ" firstAttribute="height" secondItem="huW-aO-w6w" secondAttribute="height" multiplier="0.5" id="4t4-7p-DxV"/>
+                            <constraint firstItem="O2s-kb-sbq" firstAttribute="centerX" secondItem="huW-aO-w6w" secondAttribute="centerX" id="7I4-Qm-EDh"/>
+                            <constraint firstItem="O2s-kb-sbq" firstAttribute="centerY" secondItem="huW-aO-w6w" secondAttribute="centerY" id="Dmo-gc-29e"/>
+                            <constraint firstItem="Hj3-i8-daQ" firstAttribute="centerX" secondItem="huW-aO-w6w" secondAttribute="centerX" id="cc8-oS-6y9"/>
+                            <constraint firstItem="Hj3-i8-daQ" firstAttribute="width" secondItem="huW-aO-w6w" secondAttribute="width" multiplier="0.5" id="uck-dJ-BBZ"/>
+                            <constraint firstItem="Hj3-i8-daQ" firstAttribute="centerY" secondItem="huW-aO-w6w" secondAttribute="centerY" id="x2V-eV-Hu6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="33u-nq-EC2">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Edz-AG-Zos">
+                            <connections>
+                                <action selector="saveAction:" destination="6B6-iV-bkr" id="rjL-ip-fZf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cardView" destination="Hj3-i8-daQ" id="KvA-CH-769"/>
+                        <outlet property="colorPicker" destination="O2s-kb-sbq" id="IGp-Lr-4QO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPY-S3-yDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763" y="890"/>
         </scene>
         <!--Add Word View Controller-->
         <scene sceneID="p9m-R8-jSM">
@@ -160,6 +212,9 @@
             <point key="canvasLocation" x="19.419642857142858" y="73.913043478260875"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kjW-Jv-d5K"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="left-arrow" width="128" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
