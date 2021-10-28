@@ -52,6 +52,7 @@ class AddWordViewController: UIViewController {
         
         do {
             try self.dataManager.save()
+            print("Saving")
         }
         catch {
             print("Error saving data")

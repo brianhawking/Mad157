@@ -14,13 +14,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var profileNames = [
         (name: "Connor", image: "image 1", age: "4"),
         (name: "Landon", image: "Rectangle 32", age: "1"),
-        (name: "Pipere", image: "dinosaur-1 1", age: "5")
+        (name: "Piper", image: "dinosaur-1 1", age: "5")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // filemanager to get profile info
+        // name, image, age
+        
+        
+        // connect to tableview cell
         let nib = UINib(nibName: "ProfileListTableViewCell", bundle: nil)
         tableview.register(nib, forCellReuseIdentifier: "ProfileListTableViewCell")
         

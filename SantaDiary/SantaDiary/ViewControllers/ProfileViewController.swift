@@ -20,7 +20,9 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // set title
+//        self.title = profileInformation.name
+        
         profileNameLabel.text = profileInformation.name
         profileImage.image = UIImage(named: profileInformation.image)
         
@@ -33,6 +35,13 @@ class ProfileViewController: UIViewController {
             buttonView.isUserInteractionEnabled = true
                 buttonView.addGestureRecognizer(gesture)
         }
+        
+        // edit navigation bar
+        navigationController?.navigationBar.tintColor = UIColor.white;
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     @objc func handleTapGesture(sender: UITapGestureRecognizer) {
@@ -42,11 +51,11 @@ class ProfileViewController: UIViewController {
         case 1:
             performSegue(withIdentifier: "ToNiceNaughtySegue", sender: nil)
         case 2:
-            print("You chose Send a letter")
+            performSegue(withIdentifier: "toSantaLetters", sender: nil)
         case 3:
-            print("You chose diary")
+            performSegue(withIdentifier: "toDiary", sender: nil)
         case 4:
-            print("you chose mailbox")
+            performSegue(withIdentifier: "toMailbox", sender: nil)
         
         default:
             print("not sure what happened")
@@ -58,6 +67,25 @@ class ProfileViewController: UIViewController {
             let controller = segue.destination as! NiceOrNaughty
             controller.profileInformation = profileInformation
         }
+        else if (segue.identifier == "toDiary") {
+            let controller = segue.destination as! DiaryViewController
+            controller.profileInformation = profileInformation
+        }
+        else if (segue.identifier == "toMailbox") {
+            let controller = segue.destination as! MailboxViewController
+            controller.profileInformation = profileInformation
+        }
+        else if (segue.identifier == "toSantaLetters") {
+            let controller = segue.destination as! LettersToSantaViewController
+            controller.profileInformation = profileInformation
+        }
+        else if (segue.identifier == "toSettings") {
+            let controller = segue.destination as! SettingsViewController
+            controller.profileInformation = profileInformation
+        }
     }
 
+    @IBAction func settingsAction(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "toSettings", sender: nil)
+    }
 }

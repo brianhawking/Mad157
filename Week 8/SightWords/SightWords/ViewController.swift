@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     // words
     var listOfWords: [String] = []
     var wordIndex: Int = 0
+    var orderBy: [String] = ["Alphabetical", "Length"]
+    var orderIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +83,14 @@ class ViewController: UIViewController {
             listArray = result as! [NSManagedObject]
             for word in listArray {
                 let w = word.value(forKey: "word") as! String
-                listOfWords.append(w)
+                
+                for i in 1...10 {
+                    if UserDefaults.standard.bool(forKey: String(i)) && w.count == i {
+                        listOfWords.append(w)
+                    }
+                }
+                
+                
             }
         } catch  {
             print("ERROR getting words")
@@ -103,8 +112,14 @@ class ViewController: UIViewController {
             listArray = result as! [NSManagedObject]
             for word in listArray {
                 let w = word.value(forKey: "word") as! String
-                if !listOfWords.contains(w) {
-                    listOfWords.append(w)
+//                if !listOfWords.contains(w) {
+//                    listOfWords.append(w)
+//                }
+                
+                for i in 1...10 {
+                    if UserDefaults.standard.bool(forKey: String(i)) && (w.count == i || w.count >= 10) && !listOfWords.contains(w) {
+                        listOfWords.append(w)
+                    }
                 }
             }
         } catch  {
@@ -112,6 +127,8 @@ class ViewController: UIViewController {
         }
         print(listOfWords)
     }
+    
+    
 
     // remove current word from DB and listOfWords
     @IBAction func deleteAction(_ sender: Any) {
@@ -229,5 +246,20 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func orderAction(_ sender: Any) {
+        
+        switch orderIndex {
+        case 0:
+            listOfWords.sort { $0.lowercased() < $1.lowercased() }
+        case 1:
+            listOfWords.sort { $0.count < $1.count }
+        default:
+            print("nothing")
+        }
+        wordLabel.text = listOfWords[wordIndex]
+        orderIndex = (orderIndex+1)%(orderBy.count)
+        
+        print(listOfWords)
+    }
 }
 

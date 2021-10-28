@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="234" id="KGk-i7-Jjw" customClass="SantaLetterCell" customModule="SantaDiary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="234"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="234"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMt-Vx-YwY">
+                        <rect key="frame" x="0.0" y="62" width="320" height="110"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1mN-jg-KPz">
+                                <rect key="frame" x="5" y="5" width="310" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleigh" translatesAutoresizingMaskIntoConstraints="NO" id="rhV-b2-ofe">
+                                        <rect key="frame" x="25" y="15" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="fOu-ce-Mhp"/>
+                                            <constraint firstAttribute="width" constant="70" id="z3G-JT-Yiy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKl-So-BEx">
+                                        <rect key="frame" x="105" y="5" width="2" height="90"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="2" id="lzZ-HX-u0i"/>
+                                            <constraint firstAttribute="height" constant="90" id="nIr-s9-9et"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nmM-KD-SFs">
+                                        <rect key="frame" x="117" y="10" width="193" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October 24th, 2021 at 5pm" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJc-RQ-7W2">
+                                                <rect key="frame" x="0.0" y="0.0" width="193" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Thank you for letter. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D47-89-K4X">
+                                                <rect key="frame" x="0.0" y="41" width="193" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nmM-KD-SFs" firstAttribute="top" secondItem="1mN-jg-KPz" secondAttribute="top" constant="10" id="I3Z-kP-IYg"/>
+                                    <constraint firstItem="rhV-b2-ofe" firstAttribute="leading" secondItem="1mN-jg-KPz" secondAttribute="leading" constant="10" id="bSG-eT-oHP"/>
+                                    <constraint firstAttribute="bottom" secondItem="nmM-KD-SFs" secondAttribute="bottom" constant="10" id="sEs-bq-C3Y"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.86666666670000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1mN-jg-KPz" firstAttribute="leading" secondItem="LMt-Vx-YwY" secondAttribute="leading" constant="5" id="35p-hc-QmC"/>
+                            <constraint firstAttribute="bottom" secondItem="1mN-jg-KPz" secondAttribute="bottom" constant="5" id="8bU-f9-TaZ"/>
+                            <constraint firstAttribute="height" constant="110" id="Yda-OY-mpl"/>
+                            <constraint firstAttribute="trailing" secondItem="1mN-jg-KPz" secondAttribute="trailing" constant="5" id="lxY-xt-qoa"/>
+                            <constraint firstItem="1mN-jg-KPz" firstAttribute="top" secondItem="LMt-Vx-YwY" secondAttribute="top" constant="5" id="oOv-wg-vVI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LMt-Vx-YwY" secondAttribute="trailing" id="Qhh-Lb-kzb"/>
+                    <constraint firstItem="LMt-Vx-YwY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Sxi-XQ-bWF"/>
+                    <constraint firstItem="LMt-Vx-YwY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YKi-Uf-zsJ"/>
+                    <constraint firstItem="LMt-Vx-YwY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vxS-u3-OwQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImageView" destination="rhV-b2-ofe" id="XcM-gr-WTb"/>
+                <outlet property="date" destination="nJc-RQ-7W2" id="LXm-7h-rtQ"/>
+                <outlet property="message" destination="D47-89-K4X" id="djT-vt-jhJ"/>
+                <outlet property="view" destination="LMt-Vx-YwY" id="Cf2-9y-0It"/>
+            </connections>
+            <point key="canvasLocation" x="18.840579710144929" y="20.758928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="sleigh" width="60" height="60"/>
+    </resources>
+</document>

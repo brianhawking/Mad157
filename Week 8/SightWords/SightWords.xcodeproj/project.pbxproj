@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F73CA6202718F24E00933449 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73CA61F2718F24E00933449 /* SettingsViewController.swift */; };
 		F752079D2709436E00FC415D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F752079C2709436E00FC415D /* AppDelegate.swift */; };
 		F752079F2709436E00FC415D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F752079E2709436E00FC415D /* SceneDelegate.swift */; };
 		F75207A12709436E00FC415D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75207A02709436E00FC415D /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F73CA61F2718F24E00933449 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F75207992709436E00FC415D /* SightWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SightWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F752079C2709436E00FC415D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F752079E2709436E00FC415D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				F752079E2709436E00FC415D /* SceneDelegate.swift */,
 				F75207A02709436E00FC415D /* ViewController.swift */,
 				F75207A22709436E00FC415D /* Main.storyboard */,
+				F73CA61F2718F24E00933449 /* SettingsViewController.swift */,
 				F7F41349270E046700F09FFA /* ColorSchemeViewController.swift */,
 				F7F41347270DFD4B00F09FFA /* ColorScheme.swift */,
 				F75207CF27094C9400FC415D /* AddWordViewController.swift */,
@@ -277,6 +280,7 @@
 				F7F41348270DFD4B00F09FFA /* ColorScheme.swift in Sources */,
 				F7F4134A270E046700F09FFA /* ColorSchemeViewController.swift in Sources */,
 				F752079F2709436E00FC415D /* SceneDelegate.swift in Sources */,
+				F73CA6202718F24E00933449 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

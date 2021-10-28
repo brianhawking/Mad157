@@ -1,14 +1,19 @@
 //
-//  SantaLettersCell.swift
+//  SantaLetterCell.swift
 //  SantaDiary
 //
-//  Created by Brian Veitch on 9/17/21.
+//  Created by Brian Veitch on 10/24/21.
 //
 
 import UIKit
 
-class SantaLettersCell: UITableViewCell {
+class SantaLetterCell: UITableViewCell {
 
+    @IBOutlet var date: UILabel!
+    @IBOutlet var message: UILabel!
+    @IBOutlet var avatarImageView: UIImageView!
+    @IBOutlet var view: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
