@@ -31,9 +31,10 @@ class MailboxViewController: UIViewController {
         tableView.dataSource = self
         
         // give dummy data
-        results.append((image: "sleigh", date: "January 11, 2021", message: "This is a message from Santa."))
-        results.append((image: "sleigh", date: "July 2, 2021", message: "This is a message from Santa."))
-        results.append((image: "sleigh", date: "October 24, 2021", message: "This is a message from Santa."))
+        let image = "OpenEnvelope"
+        results.append((image: "ClosedEnvelope", date: "November 2, 2021", message: "LETTER FROM SANTA"))
+        results.append((image: image, date: "July 2, 2021", message: "Dummy data: This is a message from Santa."))
+        results.append((image: image, date: "October 24, 2021", message: "Dummy data: This is a message from Santa."))
         
     }
     
@@ -44,6 +45,7 @@ class MailboxViewController: UIViewController {
             
             controller.profileInformation = profileInformation
             controller.dateOfLetter = results[row].date
+            controller.to = "LetterFromSanta"
         }
     }
 
@@ -62,6 +64,10 @@ extension MailboxViewController: UITableViewDataSource {
         return results.count
     }
     
+//    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+//        return false
+//    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         performSegue(withIdentifier: "fromSantaSegue", sender: indexPath.row)
@@ -71,14 +77,28 @@ extension MailboxViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SantaLetterCell") as! SantaLetterCell
-        
+        cell.selectionStyle = .none
         cell.backgroundColor = .clear
-        cell.view.layer.borderColor = UIColor.black.cgColor
         cell.view.layer.cornerRadius = 20
-        cell.view.layer.borderWidth = 2
+        
+        if (results[indexPath.row].image == "OpenEnvelope"){
+            cell.view.layer.borderColor = UIColor.black.cgColor
+            cell.view.layer.borderWidth = 2
+        }
+        else {
+            cell.view.layer.borderColor = UIColor.yellow.cgColor
+            cell.view.layer.borderWidth = 6
+            cell.view.layer.shadowRadius = 5
+            cell.view.layer.shadowColor = UIColor.yellow.cgColor
+            cell.view.layer.shadowOpacity = 0.5
+            cell.view.layer.shadowOffset = .zero
+            cell.view.layer.shadowRadius = 3
+        }
+        
 
         cell.message.text = results[indexPath.row].message
         cell.date.text = results[indexPath.row].date
+        cell.avatarImageView.image = UIImage(named: results[indexPath.row].image)
         
         
         return cell

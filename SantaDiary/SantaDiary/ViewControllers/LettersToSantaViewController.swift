@@ -11,7 +11,7 @@ class LettersToSantaViewController: UIViewController {
 
     var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
 
-    var results: [(image: String, date: String, message: String)] = []
+    var letters: [(date: String, letter: String)] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,6 +19,7 @@ class LettersToSantaViewController: UIViewController {
         super.viewDidLoad()
 
         // filemanager to get data
+        getLetters(to: "LetterToSanta")
         
         
         
@@ -29,20 +30,13 @@ class LettersToSantaViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "SantaLetterCell")
         tableView.delegate = self
         tableView.dataSource = self
-        
-        
-        // give dummy data
-        results.append((image: "sleigh", date: "January 11, 2021", message: "This is a message to Santa."))
-        results.append((image: "sleigh", date: "July 2, 2021", message: "This is a message to Santa."))
-        results.append((image: "sleigh", date: "October 24, 2021", message: "This is a message to Santa."))
-        results.append((image: "sleigh", date: "January 11, 2021", message: "This is a message to Santa."))
-        results.append((image: "sleigh", date: "July 2, 2021", message: "This is a message to Santa."))
-        results.append((image: "sleigh", date: "October 24, 2021", message: "This is a message to Santa."))
-        results.append((image: "sleigh", date: "January 11, 2021", message: "This is a message to Santa."))
-        results.append((image: "sleigh", date: "July 2, 2021", message: "This is a message to Santa."))
-        results.append((image: "sleigh", date: "October 24, 2021", message: "This is a message to Santa."))
-        
        
+    }
+    
+    func getLetters(to: String) {
+        
+        letters = LetterManager().getLetters(profileName: profileInformation.name, to: to)
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,13 +45,20 @@ class LettersToSantaViewController: UIViewController {
             let row = sender as! Int //we know that sender is an NSIndexPath here.
             
             controller.profileInformation = profileInformation
-            controller.dateOfLetter = results[row].date
+            controller.dateOfLetter = letters[row].date
+            controller.to = "LetterToSanta"
         }
         
         else if (segue.identifier == "toWriteLetter") {
             let controller = segue.destination as! WriteLetterViewController
             
             controller.profileInformation = profileInformation
+            
+            controller.completionHandler = { b in
+                self.getLetters(to: "LetterToSanta")
+                self.tableView.reloadData()
+                print("new data listed")
+            }
         }
     }
     
@@ -80,7 +81,7 @@ extension LettersToSantaViewController: UITableViewDelegate {
 extension LettersToSantaViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return results.count
+        return letters.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -93,12 +94,14 @@ extension LettersToSantaViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SantaLetterCell") as! SantaLetterCell
         
         cell.backgroundColor = .clear
+        cell.selectionStyle = .none
         cell.view.layer.borderColor = UIColor.black.cgColor
         cell.view.layer.cornerRadius = 20
         cell.view.layer.borderWidth = 2
 
-        cell.message.text = results[indexPath.row].message
-        cell.date.text = results[indexPath.row].date
+        cell.message.text = letters[indexPath.row].letter
+        cell.date.text = letters[indexPath.row].date
+        cell.avatarImageView.image = UIImage(named: SantaImages().letters.randomElement()!)
         
         
         return cell

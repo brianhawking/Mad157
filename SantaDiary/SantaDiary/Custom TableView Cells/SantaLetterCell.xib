@@ -22,15 +22,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1mN-jg-KPz">
                                 <rect key="frame" x="5" y="5" width="310" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleigh" translatesAutoresizingMaskIntoConstraints="NO" id="rhV-b2-ofe">
-                                        <rect key="frame" x="25" y="15" width="70" height="70"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="267-sS-Mgc">
+                                        <rect key="frame" x="0.0" y="0.0" width="10" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="zBl-gA-HYe"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sleigh" translatesAutoresizingMaskIntoConstraints="NO" id="rhV-b2-ofe">
+                                        <rect key="frame" x="20" y="15" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="fOu-ce-Mhp"/>
                                             <constraint firstAttribute="width" constant="70" id="z3G-JT-Yiy"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKl-So-BEx">
-                                        <rect key="frame" x="105" y="5" width="2" height="90"/>
+                                        <rect key="frame" x="100" y="5" width="2" height="90"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="2" id="lzZ-HX-u0i"/>
@@ -38,16 +45,16 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nmM-KD-SFs">
-                                        <rect key="frame" x="117" y="10" width="193" height="80"/>
+                                        <rect key="frame" x="112" y="10" width="198" height="80"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October 24th, 2021 at 5pm" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJc-RQ-7W2">
-                                                <rect key="frame" x="0.0" y="0.0" width="193" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Thank you for letter. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D47-89-K4X">
-                                                <rect key="frame" x="0.0" y="41" width="193" height="39"/>
+                                                <rect key="frame" x="0.0" y="41" width="198" height="39"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -56,13 +63,16 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="267-sS-Mgc" firstAttribute="top" secondItem="1mN-jg-KPz" secondAttribute="top" id="6Gz-EO-OSo"/>
                                     <constraint firstItem="nmM-KD-SFs" firstAttribute="top" secondItem="1mN-jg-KPz" secondAttribute="top" constant="10" id="I3Z-kP-IYg"/>
-                                    <constraint firstItem="rhV-b2-ofe" firstAttribute="leading" secondItem="1mN-jg-KPz" secondAttribute="leading" constant="10" id="bSG-eT-oHP"/>
+                                    <constraint firstItem="267-sS-Mgc" firstAttribute="leading" secondItem="1mN-jg-KPz" secondAttribute="leading" id="gEn-Pe-fSc"/>
                                     <constraint firstAttribute="bottom" secondItem="nmM-KD-SFs" secondAttribute="bottom" constant="10" id="sEs-bq-C3Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="267-sS-Mgc" secondAttribute="bottom" id="yXg-lq-5DC"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.92941176469999998" green="0.86666666670000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.90588235859999999" green="0.86666667460000002" blue="0.75686275960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1mN-jg-KPz" firstAttribute="leading" secondItem="LMt-Vx-YwY" secondAttribute="leading" constant="5" id="35p-hc-QmC"/>
                             <constraint firstAttribute="bottom" secondItem="1mN-jg-KPz" secondAttribute="bottom" constant="5" id="8bU-f9-TaZ"/>
@@ -72,6 +82,8 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="LMt-Vx-YwY" secondAttribute="trailing" id="Qhh-Lb-kzb"/>
                     <constraint firstItem="LMt-Vx-YwY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Sxi-XQ-bWF"/>
@@ -90,6 +102,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="sleigh" width="60" height="60"/>
+        <image name="Sleigh" width="60" height="60"/>
     </resources>
 </document>

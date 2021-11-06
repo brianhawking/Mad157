@@ -13,7 +13,8 @@ class ShowLetterFromSanta: UIViewController {
     var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
     
     var dateOfLetter: String = ""
-
+    var to: String = "LetterToSanta"
+    
     
     // views
     @IBOutlet weak var reindeerImage: UIImageView!
@@ -25,16 +26,16 @@ class ShowLetterFromSanta: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // get letter data
+        getLetter()
+        
         // change title of screen
         self.title = dateOfLetter
         
         // add padding to letterTextView
         letterTextView.textContainerInset = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
 
-        
-        // filemanager to get letter text
-        
-        
+      
         reindeerImage.transform = reindeerImage.transform.rotated(by: .pi * -1/3)
         snowmanImage.transform = snowmanImage.transform.rotated(by: .pi * 1/6)
 
@@ -49,6 +50,12 @@ class ShowLetterFromSanta: UIViewController {
             snowmanImage.isUserInteractionEnabled = true
             snowmanImage.addGestureRecognizer(tapGestureRecognizer2)
         
+    }
+    
+    func getLetter() {
+        
+        letterTextView.text = LetterManager().getLetter(profileName: profileInformation.name, date: dateOfLetter, to: to)
+
     }
     
     @objc func reindeerTapped(tapGestureRecognizer: UITapGestureRecognizer) {

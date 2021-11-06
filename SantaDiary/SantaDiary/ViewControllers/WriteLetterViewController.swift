@@ -15,21 +15,25 @@ class WriteLetterViewController: UIViewController {
     var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
     
     // views
-    
+    @IBOutlet weak var dearSantaLabel: UILabel!
     @IBOutlet weak var letterTextView: UITextView!
-    
     @IBOutlet weak var reindeerImage: UIImageView!
     @IBOutlet weak var reindeerImage2: UIImageView!
-    
     @IBOutlet weak var snowmanImage: UIImageView!
+    
+    var letter: String = ""
+    public var completionHandler: ((Bool) -> Void)?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // filemanager
         
+        
         // view adjustments
         letterTextView.textContainerInset = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
+        
         
         reindeerImage.transform = reindeerImage.transform.rotated(by: .pi * -1/3)
         snowmanImage.transform = snowmanImage.transform.rotated(by: .pi * 1/6)
@@ -45,8 +49,8 @@ class WriteLetterViewController: UIViewController {
             reindeerImage.isUserInteractionEnabled = true
             reindeerImage.addGestureRecognizer(tapGestureRecognizer2)
         
-        
     }
+    
     
     @objc func reindeerTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         
@@ -82,9 +86,25 @@ class WriteLetterViewController: UIViewController {
     
     @IBAction func save(_ sender: UIButton) {
         
-        // filemanager
+        // grab letter
+        letter = letterTextView.text
         
-        // go back
+        // filemanager
+        let letterEntry = LetterEntry(letter: letter)
+        if( LetterManager().saveLetter(
+                profileName: profileInformation.name,
+                entry: letterEntry,
+                to: "LetterToSanta")) {
+            // letter saved
+            completionHandler?(true)
+            
+            // go back
+            self.navigationController?.popViewController(animated: true)
+            
+        }
+        else {
+            print("Can't go back")
+        }
         
     }
 }

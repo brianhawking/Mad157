@@ -10,20 +10,17 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableview: UITableView!
+    @IBOutlet var backgroundView: UIView!
     
+    // dummy data
     var profileNames = [
-        (name: "Connor", image: "image 1", age: "4"),
-        (name: "Landon", image: "Rectangle 32", age: "1"),
-        (name: "Piper", image: "dinosaur-1 1", age: "5")
+        (name: "Connor", image: "Dino1", age: "4"),
+        (name: "Landon", image: "Ladybug", age: "1"),
+        (name: "Piper", image: "Bee", age: "5")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        // filemanager to get profile info
-        // name, image, age
-        
         
         // connect to tableview cell
         let nib = UINib(nibName: "ProfileListTableViewCell", bundle: nil)
@@ -53,6 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableview.dequeueReusableCell(withIdentifier: "ProfileListTableViewCell", for: indexPath) as! ProfileListTableViewCell
         
         cell.backgroundColor = .clear
+        cell.selectionStyle = .none
         cell.view.layer.borderColor = UIColor.black.cgColor
         cell.view.layer.cornerRadius = 20
         cell.view.layer.borderWidth = 2

@@ -34,6 +34,8 @@ class ViewController: UIViewController {
         let baseURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
         fileURL = baseURL.appendingPathComponent("notes.txt")
         
+        print(fileURL)
+        
         loadNotes()
         
         setupTableView()

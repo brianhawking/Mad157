@@ -22,7 +22,6 @@ class DiaryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         // put avatar in the top right navigation
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: profileInformation.image), style: .plain, target: nil, action: nil)
