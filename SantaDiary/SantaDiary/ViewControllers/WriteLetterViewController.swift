@@ -33,6 +33,7 @@ class WriteLetterViewController: UIViewController {
         
         // view adjustments
         letterTextView.textContainerInset = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
+        letterTextView.backgroundColor = UIColor.white
         
         
         reindeerImage.transform = reindeerImage.transform.rotated(by: .pi * -1/3)

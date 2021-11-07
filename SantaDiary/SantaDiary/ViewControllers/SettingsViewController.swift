@@ -75,6 +75,7 @@ extension SettingsViewController: UITableViewDataSource {
         
 //        cell.cellTitle.text = tableViewCells[indexPath.row]
         cell.textLabel?.text = tableViewCells[indexPath.row]
+        cell.textLabel?.tintColor = UIColor.black
         
         return cell
     }

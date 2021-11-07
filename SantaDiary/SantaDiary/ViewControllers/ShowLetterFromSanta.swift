@@ -33,7 +33,8 @@ class ShowLetterFromSanta: UIViewController {
         self.title = dateOfLetter
         
         // add padding to letterTextView
-        letterTextView.textContainerInset = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
+        letterTextView.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 50, right: 20)
+        letterTextView.backgroundColor = UIColor.white
 
       
         reindeerImage.transform = reindeerImage.transform.rotated(by: .pi * -1/3)
