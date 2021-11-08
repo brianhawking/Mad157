@@ -26,6 +26,10 @@ class PasswordViewController: UIViewController, UITextViewDelegate, UITextFieldD
         hiddenTextField.delegate = self
         hiddenTextField.becomeFirstResponder()
         hiddenTextField.isHidden = true
+        
+        for box in digits {
+            box.layer.cornerRadius = 10
+        }
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {

@@ -1,0 +1,749 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F750CF7527397F510003E154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CF7427397F510003E154 /* AppDelegate.swift */; };
+		F750CF7727397F510003E154 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CF7627397F510003E154 /* SceneDelegate.swift */; };
+		F750CF7927397F510003E154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CF7827397F510003E154 /* ViewController.swift */; };
+		F750CF7C27397F510003E154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F750CF7A27397F510003E154 /* Main.storyboard */; };
+		F750CF7F27397F510003E154 /* _BoxPassword.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F750CF7D27397F510003E154 /* _BoxPassword.xcdatamodeld */; };
+		F750CF8127397F520003E154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F750CF8027397F520003E154 /* Assets.xcassets */; };
+		F750CF8427397F520003E154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F750CF8227397F520003E154 /* LaunchScreen.storyboard */; };
+		F750CF8F27397F520003E154 /* _BoxPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CF8E27397F520003E154 /* _BoxPasswordTests.swift */; };
+		F750CF9A27397F520003E154 /* _BoxPasswordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CF9927397F520003E154 /* _BoxPasswordUITests.swift */; };
+		F750CFC427397F7D0003E154 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFA927397F7C0003E154 /* IQTextView.swift */; };
+		F750CFC527397F7D0003E154 /* IQKeyboardManager+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFAA27397F7C0003E154 /* IQKeyboardManager+Internal.swift */; };
+		F750CFC627397F7D0003E154 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFAC27397F7C0003E154 /* IQPreviousNextView.swift */; };
+		F750CFC727397F7D0003E154 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFAD27397F7C0003E154 /* IQTitleBarButtonItem.swift */; };
+		F750CFC827397F7D0003E154 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFAE27397F7C0003E154 /* IQBarButtonItem.swift */; };
+		F750CFC927397F7D0003E154 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFAF27397F7C0003E154 /* IQToolbar.swift */; };
+		F750CFCA27397F7D0003E154 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFB027397F7C0003E154 /* IQUIView+IQKeyboardToolbar.swift */; };
+		F750CFCB27397F7D0003E154 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFB127397F7C0003E154 /* IQInvocation.swift */; };
+		F750CFCC27397F7D0003E154 /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFB227397F7C0003E154 /* IQKeyboardManager+UIKeyboardNotification.swift */; };
+		F750CFCD27397F7D0003E154 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFB427397F7C0003E154 /* IQKeyboardManagerConstantsInternal.swift */; };
+		F750CFCE27397F7D0003E154 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFB527397F7C0003E154 /* IQKeyboardManagerConstants.swift */; };
+		F750CFCF27397F7D0003E154 /* IQKeyboardManager+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFB627397F7C0003E154 /* IQKeyboardManager+Position.swift */; };
+		F750CFD027397F7D0003E154 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFB727397F7D0003E154 /* IQKeyboardReturnKeyHandler.swift */; };
+		F750CFD127397F7D0003E154 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFB827397F7D0003E154 /* IQKeyboardManager.swift */; };
+		F750CFD227397F7D0003E154 /* IQKeyboardManager+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFB927397F7D0003E154 /* IQKeyboardManager+Debug.swift */; };
+		F750CFD327397F7D0003E154 /* IQKeyboardManager+OrientationNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFBA27397F7D0003E154 /* IQKeyboardManager+OrientationNotification.swift */; };
+		F750CFD427397F7D0003E154 /* IQKeyboardManager+Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFBB27397F7D0003E154 /* IQKeyboardManager+Toolbar.swift */; };
+		F750CFD527397F7D0003E154 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFBE27397F7D0003E154 /* IQUIScrollView+Additions.swift */; };
+		F750CFD627397F7D0003E154 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFBF27397F7D0003E154 /* IQUIViewController+Additions.swift */; };
+		F750CFD727397F7D0003E154 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFC027397F7D0003E154 /* IQUITextFieldView+Additions.swift */; };
+		F750CFD827397F7D0003E154 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFC127397F7D0003E154 /* IQUIView+Hierarchy.swift */; };
+		F750CFD927397F7D0003E154 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFC227397F7D0003E154 /* IQNSArray+Sort.swift */; };
+		F750CFDA27397F7D0003E154 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFC327397F7D0003E154 /* IQKeyboardManager+UITextFieldViewNotification.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F750CF8B27397F520003E154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F750CF6927397F510003E154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F750CF7027397F510003E154;
+			remoteInfo = 4BoxPassword;
+		};
+		F750CF9627397F520003E154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F750CF6927397F510003E154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F750CF7027397F510003E154;
+			remoteInfo = 4BoxPassword;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F750CF7127397F510003E154 /* 4BoxPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4BoxPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F750CF7427397F510003E154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F750CF7627397F510003E154 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F750CF7827397F510003E154 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F750CF7B27397F510003E154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F750CF7E27397F510003E154 /* _BoxPassword.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _BoxPassword.xcdatamodel; sourceTree = "<group>"; };
+		F750CF8027397F520003E154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F750CF8327397F520003E154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F750CF8527397F520003E154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F750CF8A27397F520003E154 /* 4BoxPasswordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4BoxPasswordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F750CF8E27397F520003E154 /* _BoxPasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _BoxPasswordTests.swift; sourceTree = "<group>"; };
+		F750CF9027397F520003E154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F750CF9527397F520003E154 /* 4BoxPasswordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4BoxPasswordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F750CF9927397F520003E154 /* _BoxPasswordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _BoxPasswordUITests.swift; sourceTree = "<group>"; };
+		F750CF9B27397F520003E154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F750CFA927397F7C0003E154 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
+		F750CFAA27397F7C0003E154 /* IQKeyboardManager+Internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQKeyboardManager+Internal.swift"; sourceTree = "<group>"; };
+		F750CFAC27397F7C0003E154 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
+		F750CFAD27397F7C0003E154 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		F750CFAE27397F7C0003E154 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
+		F750CFAF27397F7C0003E154 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
+		F750CFB027397F7C0003E154 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		F750CFB127397F7C0003E154 /* IQInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQInvocation.swift; sourceTree = "<group>"; };
+		F750CFB227397F7C0003E154 /* IQKeyboardManager+UIKeyboardNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQKeyboardManager+UIKeyboardNotification.swift"; sourceTree = "<group>"; };
+		F750CFB427397F7C0003E154 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		F750CFB527397F7C0003E154 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		F750CFB627397F7C0003E154 /* IQKeyboardManager+Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQKeyboardManager+Position.swift"; sourceTree = "<group>"; };
+		F750CFB727397F7D0003E154 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		F750CFB827397F7D0003E154 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
+		F750CFB927397F7D0003E154 /* IQKeyboardManager+Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQKeyboardManager+Debug.swift"; sourceTree = "<group>"; };
+		F750CFBA27397F7D0003E154 /* IQKeyboardManager+OrientationNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQKeyboardManager+OrientationNotification.swift"; sourceTree = "<group>"; };
+		F750CFBB27397F7D0003E154 /* IQKeyboardManager+Toolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQKeyboardManager+Toolbar.swift"; sourceTree = "<group>"; };
+		F750CFBC27397F7D0003E154 /* IQKeyboardManagerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerSwift.h; sourceTree = "<group>"; };
+		F750CFBE27397F7D0003E154 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		F750CFBF27397F7D0003E154 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		F750CFC027397F7D0003E154 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		F750CFC127397F7D0003E154 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		F750CFC227397F7D0003E154 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		F750CFC327397F7D0003E154 /* IQKeyboardManager+UITextFieldViewNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQKeyboardManager+UITextFieldViewNotification.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F750CF6E27397F510003E154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F750CF8727397F520003E154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F750CF9227397F520003E154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F750CF6827397F510003E154 = {
+			isa = PBXGroup;
+			children = (
+				F750CF7327397F510003E154 /* 4BoxPassword */,
+				F750CF8D27397F520003E154 /* 4BoxPasswordTests */,
+				F750CF9827397F520003E154 /* 4BoxPasswordUITests */,
+				F750CF7227397F510003E154 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F750CF7227397F510003E154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F750CF7127397F510003E154 /* 4BoxPassword.app */,
+				F750CF8A27397F520003E154 /* 4BoxPasswordTests.xctest */,
+				F750CF9527397F520003E154 /* 4BoxPasswordUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F750CF7327397F510003E154 /* 4BoxPassword */ = {
+			isa = PBXGroup;
+			children = (
+				F750CFA727397F7C0003E154 /* IQKeyboardManagerSwift */,
+				F750CF7427397F510003E154 /* AppDelegate.swift */,
+				F750CF7627397F510003E154 /* SceneDelegate.swift */,
+				F750CF7827397F510003E154 /* ViewController.swift */,
+				F750CF7A27397F510003E154 /* Main.storyboard */,
+				F750CF8027397F520003E154 /* Assets.xcassets */,
+				F750CF8227397F520003E154 /* LaunchScreen.storyboard */,
+				F750CF8527397F520003E154 /* Info.plist */,
+				F750CF7D27397F510003E154 /* _BoxPassword.xcdatamodeld */,
+			);
+			path = 4BoxPassword;
+			sourceTree = "<group>";
+		};
+		F750CF8D27397F520003E154 /* 4BoxPasswordTests */ = {
+			isa = PBXGroup;
+			children = (
+				F750CF8E27397F520003E154 /* _BoxPasswordTests.swift */,
+				F750CF9027397F520003E154 /* Info.plist */,
+			);
+			path = 4BoxPasswordTests;
+			sourceTree = "<group>";
+		};
+		F750CF9827397F520003E154 /* 4BoxPasswordUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F750CF9927397F520003E154 /* _BoxPasswordUITests.swift */,
+				F750CF9B27397F520003E154 /* Info.plist */,
+			);
+			path = 4BoxPasswordUITests;
+			sourceTree = "<group>";
+		};
+		F750CFA727397F7C0003E154 /* IQKeyboardManagerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				F750CFA827397F7C0003E154 /* IQTextView */,
+				F750CFAA27397F7C0003E154 /* IQKeyboardManager+Internal.swift */,
+				F750CFAB27397F7C0003E154 /* IQToolbar */,
+				F750CFB227397F7C0003E154 /* IQKeyboardManager+UIKeyboardNotification.swift */,
+				F750CFB327397F7C0003E154 /* Constants */,
+				F750CFB627397F7C0003E154 /* IQKeyboardManager+Position.swift */,
+				F750CFB727397F7D0003E154 /* IQKeyboardReturnKeyHandler.swift */,
+				F750CFB827397F7D0003E154 /* IQKeyboardManager.swift */,
+				F750CFB927397F7D0003E154 /* IQKeyboardManager+Debug.swift */,
+				F750CFBA27397F7D0003E154 /* IQKeyboardManager+OrientationNotification.swift */,
+				F750CFBB27397F7D0003E154 /* IQKeyboardManager+Toolbar.swift */,
+				F750CFBC27397F7D0003E154 /* IQKeyboardManagerSwift.h */,
+				F750CFBD27397F7D0003E154 /* Categories */,
+				F750CFC327397F7D0003E154 /* IQKeyboardManager+UITextFieldViewNotification.swift */,
+			);
+			path = IQKeyboardManagerSwift;
+			sourceTree = "<group>";
+		};
+		F750CFA827397F7C0003E154 /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				F750CFA927397F7C0003E154 /* IQTextView.swift */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		F750CFAB27397F7C0003E154 /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				F750CFAC27397F7C0003E154 /* IQPreviousNextView.swift */,
+				F750CFAD27397F7C0003E154 /* IQTitleBarButtonItem.swift */,
+				F750CFAE27397F7C0003E154 /* IQBarButtonItem.swift */,
+				F750CFAF27397F7C0003E154 /* IQToolbar.swift */,
+				F750CFB027397F7C0003E154 /* IQUIView+IQKeyboardToolbar.swift */,
+				F750CFB127397F7C0003E154 /* IQInvocation.swift */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		F750CFB327397F7C0003E154 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F750CFB427397F7C0003E154 /* IQKeyboardManagerConstantsInternal.swift */,
+				F750CFB527397F7C0003E154 /* IQKeyboardManagerConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F750CFBD27397F7D0003E154 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F750CFBE27397F7D0003E154 /* IQUIScrollView+Additions.swift */,
+				F750CFBF27397F7D0003E154 /* IQUIViewController+Additions.swift */,
+				F750CFC027397F7D0003E154 /* IQUITextFieldView+Additions.swift */,
+				F750CFC127397F7D0003E154 /* IQUIView+Hierarchy.swift */,
+				F750CFC227397F7D0003E154 /* IQNSArray+Sort.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F750CF7027397F510003E154 /* 4BoxPassword */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F750CF9E27397F520003E154 /* Build configuration list for PBXNativeTarget "4BoxPassword" */;
+			buildPhases = (
+				F750CF6D27397F510003E154 /* Sources */,
+				F750CF6E27397F510003E154 /* Frameworks */,
+				F750CF6F27397F510003E154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 4BoxPassword;
+			productName = 4BoxPassword;
+			productReference = F750CF7127397F510003E154 /* 4BoxPassword.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F750CF8927397F520003E154 /* 4BoxPasswordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F750CFA127397F520003E154 /* Build configuration list for PBXNativeTarget "4BoxPasswordTests" */;
+			buildPhases = (
+				F750CF8627397F520003E154 /* Sources */,
+				F750CF8727397F520003E154 /* Frameworks */,
+				F750CF8827397F520003E154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F750CF8C27397F520003E154 /* PBXTargetDependency */,
+			);
+			name = 4BoxPasswordTests;
+			productName = 4BoxPasswordTests;
+			productReference = F750CF8A27397F520003E154 /* 4BoxPasswordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F750CF9427397F520003E154 /* 4BoxPasswordUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F750CFA427397F520003E154 /* Build configuration list for PBXNativeTarget "4BoxPasswordUITests" */;
+			buildPhases = (
+				F750CF9127397F520003E154 /* Sources */,
+				F750CF9227397F520003E154 /* Frameworks */,
+				F750CF9327397F520003E154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F750CF9727397F520003E154 /* PBXTargetDependency */,
+			);
+			name = 4BoxPasswordUITests;
+			productName = 4BoxPasswordUITests;
+			productReference = F750CF9527397F520003E154 /* 4BoxPasswordUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F750CF6927397F510003E154 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F750CF7027397F510003E154 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					F750CF8927397F520003E154 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F750CF7027397F510003E154;
+					};
+					F750CF9427397F520003E154 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F750CF7027397F510003E154;
+					};
+				};
+			};
+			buildConfigurationList = F750CF6C27397F510003E154 /* Build configuration list for PBXProject "4BoxPassword" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F750CF6827397F510003E154;
+			productRefGroup = F750CF7227397F510003E154 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F750CF7027397F510003E154 /* 4BoxPassword */,
+				F750CF8927397F520003E154 /* 4BoxPasswordTests */,
+				F750CF9427397F520003E154 /* 4BoxPasswordUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F750CF6F27397F510003E154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F750CF8427397F520003E154 /* LaunchScreen.storyboard in Resources */,
+				F750CF8127397F520003E154 /* Assets.xcassets in Resources */,
+				F750CF7C27397F510003E154 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F750CF8827397F520003E154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F750CF9327397F520003E154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F750CF6D27397F510003E154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F750CFDA27397F7D0003E154 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
+				F750CFC427397F7D0003E154 /* IQTextView.swift in Sources */,
+				F750CFCD27397F7D0003E154 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				F750CFCF27397F7D0003E154 /* IQKeyboardManager+Position.swift in Sources */,
+				F750CFD827397F7D0003E154 /* IQUIView+Hierarchy.swift in Sources */,
+				F750CFD927397F7D0003E154 /* IQNSArray+Sort.swift in Sources */,
+				F750CFC727397F7D0003E154 /* IQTitleBarButtonItem.swift in Sources */,
+				F750CFD427397F7D0003E154 /* IQKeyboardManager+Toolbar.swift in Sources */,
+				F750CF7F27397F510003E154 /* _BoxPassword.xcdatamodeld in Sources */,
+				F750CFC927397F7D0003E154 /* IQToolbar.swift in Sources */,
+				F750CFD227397F7D0003E154 /* IQKeyboardManager+Debug.swift in Sources */,
+				F750CFD127397F7D0003E154 /* IQKeyboardManager.swift in Sources */,
+				F750CFD027397F7D0003E154 /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				F750CFCC27397F7D0003E154 /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */,
+				F750CFD527397F7D0003E154 /* IQUIScrollView+Additions.swift in Sources */,
+				F750CFD327397F7D0003E154 /* IQKeyboardManager+OrientationNotification.swift in Sources */,
+				F750CFC827397F7D0003E154 /* IQBarButtonItem.swift in Sources */,
+				F750CFD727397F7D0003E154 /* IQUITextFieldView+Additions.swift in Sources */,
+				F750CFC627397F7D0003E154 /* IQPreviousNextView.swift in Sources */,
+				F750CF7927397F510003E154 /* ViewController.swift in Sources */,
+				F750CF7527397F510003E154 /* AppDelegate.swift in Sources */,
+				F750CFD627397F7D0003E154 /* IQUIViewController+Additions.swift in Sources */,
+				F750CFCA27397F7D0003E154 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				F750CFCB27397F7D0003E154 /* IQInvocation.swift in Sources */,
+				F750CFC527397F7D0003E154 /* IQKeyboardManager+Internal.swift in Sources */,
+				F750CFCE27397F7D0003E154 /* IQKeyboardManagerConstants.swift in Sources */,
+				F750CF7727397F510003E154 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F750CF8627397F520003E154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F750CF8F27397F520003E154 /* _BoxPasswordTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F750CF9127397F520003E154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F750CF9A27397F520003E154 /* _BoxPasswordUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F750CF8C27397F520003E154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F750CF7027397F510003E154 /* 4BoxPassword */;
+			targetProxy = F750CF8B27397F520003E154 /* PBXContainerItemProxy */;
+		};
+		F750CF9727397F520003E154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F750CF7027397F510003E154 /* 4BoxPassword */;
+			targetProxy = F750CF9627397F520003E154 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F750CF7A27397F510003E154 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F750CF7B27397F510003E154 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F750CF8227397F520003E154 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F750CF8327397F520003E154 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F750CF9C27397F520003E154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F750CF9D27397F520003E154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F750CF9F27397F520003E154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SG7HHALT8U;
+				INFOPLIST_FILE = 4BoxPassword/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "BrianVeitch.-BoxPassword";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F750CFA027397F520003E154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SG7HHALT8U;
+				INFOPLIST_FILE = 4BoxPassword/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "BrianVeitch.-BoxPassword";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F750CFA227397F520003E154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SG7HHALT8U;
+				INFOPLIST_FILE = 4BoxPasswordTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "BrianVeitch.-BoxPasswordTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/4BoxPassword.app/4BoxPassword";
+			};
+			name = Debug;
+		};
+		F750CFA327397F520003E154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SG7HHALT8U;
+				INFOPLIST_FILE = 4BoxPasswordTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "BrianVeitch.-BoxPasswordTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/4BoxPassword.app/4BoxPassword";
+			};
+			name = Release;
+		};
+		F750CFA527397F520003E154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SG7HHALT8U;
+				INFOPLIST_FILE = 4BoxPasswordUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "BrianVeitch.-BoxPasswordUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = 4BoxPassword;
+			};
+			name = Debug;
+		};
+		F750CFA627397F520003E154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SG7HHALT8U;
+				INFOPLIST_FILE = 4BoxPasswordUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "BrianVeitch.-BoxPasswordUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = 4BoxPassword;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F750CF6C27397F510003E154 /* Build configuration list for PBXProject "4BoxPassword" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F750CF9C27397F520003E154 /* Debug */,
+				F750CF9D27397F520003E154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F750CF9E27397F520003E154 /* Build configuration list for PBXNativeTarget "4BoxPassword" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F750CF9F27397F520003E154 /* Debug */,
+				F750CFA027397F520003E154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F750CFA127397F520003E154 /* Build configuration list for PBXNativeTarget "4BoxPasswordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F750CFA227397F520003E154 /* Debug */,
+				F750CFA327397F520003E154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F750CFA427397F520003E154 /* Build configuration list for PBXNativeTarget "4BoxPasswordUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F750CFA527397F520003E154 /* Debug */,
+				F750CFA627397F520003E154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F750CF7D27397F510003E154 /* _BoxPassword.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F750CF7E27397F510003E154 /* _BoxPassword.xcdatamodel */,
+			);
+			currentVersion = F750CF7E27397F510003E154 /* _BoxPassword.xcdatamodel */;
+			path = _BoxPassword.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F750CF6927397F510003E154 /* Project object */;
+}
