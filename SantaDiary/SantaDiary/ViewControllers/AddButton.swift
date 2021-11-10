@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class customButton: UIButton {
+class addButton: UIButton {
     
     required public init?(coder aDecoder: NSCoder) {
 
@@ -19,5 +19,5 @@ class customButton: UIButton {
         self.layer.borderColor = UIColor.black.cgColor
         self.layer.cornerRadius = self.frame.height/2
 
-    }
+        }
 }

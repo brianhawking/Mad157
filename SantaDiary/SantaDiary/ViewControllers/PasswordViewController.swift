@@ -65,8 +65,6 @@ class PasswordViewController: UIViewController, UITextViewDelegate, UITextFieldD
             }
         }
         
-        print(textField.text)
-        
         if (textField.text == password) {
             performSegue(withIdentifier: "toForParents", sender: nil)
         }

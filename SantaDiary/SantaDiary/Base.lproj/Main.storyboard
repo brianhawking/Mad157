@@ -730,7 +730,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fk-pN-CQc">
                                 <rect key="frame" x="50" y="64" width="275" height="36"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNx-yg-rq5">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNx-yg-rq5">
                                         <rect key="frame" x="0.0" y="0.0" width="27" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <state key="normal" image="back-button"/>
@@ -738,13 +738,13 @@
                                             <action selector="changeMonth:" destination="Kcu-X5-Z4W" eventType="touchUpInside" id="JXA-vR-fOt"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" ambiguous="YES" text="September 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdE-EG-MPZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="September 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdE-EG-MPZ">
                                         <rect key="frame" x="27" y="0.0" width="216" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqu-Ue-ngY">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqu-Ue-ngY">
                                         <rect key="frame" x="243" y="0.0" width="32" height="36"/>
                                         <state key="normal" image="fast-forward"/>
                                         <connections>
@@ -1135,7 +1135,7 @@ Love, Santa</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WPF-CI-vpW"/>
+        <segue reference="heo-1U-pPI"/>
         <segue reference="dDZ-O3-rZu"/>
         <segue reference="Gpf-l0-F0R"/>
     </inferredMetricsTieBreakers>

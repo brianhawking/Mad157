@@ -39,6 +39,7 @@
 		F750CFD827397F7D0003E154 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFC127397F7D0003E154 /* IQUIView+Hierarchy.swift */; };
 		F750CFD927397F7D0003E154 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFC227397F7D0003E154 /* IQNSArray+Sort.swift */; };
 		F750CFDA27397F7D0003E154 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFC327397F7D0003E154 /* IQKeyboardManager+UITextFieldViewNotification.swift */; };
+		F750CFDF273992AE0003E154 /* 4BoxPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F750CFDE273992AE0003E154 /* 4BoxPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		F750CFC127397F7D0003E154 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		F750CFC227397F7D0003E154 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		F750CFC327397F7D0003E154 /* IQKeyboardManager+UITextFieldViewNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQKeyboardManager+UITextFieldViewNotification.swift"; sourceTree = "<group>"; };
+		F750CFDE273992AE0003E154 /* 4BoxPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4BoxPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				F750CF7427397F510003E154 /* AppDelegate.swift */,
 				F750CF7627397F510003E154 /* SceneDelegate.swift */,
 				F750CF7827397F510003E154 /* ViewController.swift */,
+				F750CFDE273992AE0003E154 /* 4BoxPassword.swift */,
 				F750CF7A27397F510003E154 /* Main.storyboard */,
 				F750CF8027397F520003E154 /* Assets.xcassets */,
 				F750CF8227397F520003E154 /* LaunchScreen.storyboard */,
@@ -381,6 +384,7 @@
 				F750CFC727397F7D0003E154 /* IQTitleBarButtonItem.swift in Sources */,
 				F750CFD427397F7D0003E154 /* IQKeyboardManager+Toolbar.swift in Sources */,
 				F750CF7F27397F510003E154 /* _BoxPassword.xcdatamodeld in Sources */,
+				F750CFDF273992AE0003E154 /* 4BoxPassword.swift in Sources */,
 				F750CFC927397F7D0003E154 /* IQToolbar.swift in Sources */,
 				F750CFD227397F7D0003E154 /* IQKeyboardManager+Debug.swift in Sources */,
 				F750CFD127397F7D0003E154 /* IQKeyboardManager.swift in Sources */,
