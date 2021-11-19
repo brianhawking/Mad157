@@ -9,26 +9,40 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
+    var profileInformation: ProfileEntry = ProfileEntry(name: "", image: "", birthDay: Date())
    
     @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet var ButtonViews: [UIView]!
     
+    @IBOutlet weak var mailboxNewCountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // set title
-//        self.title = profileInformation.name
-        
         profileNameLabel.text = profileInformation.name
         profileImage.image = UIImage(named: profileInformation.image)
+        
+        mailboxNewCountLabel.layer.cornerRadius = 10
+        mailboxNewCountLabel.layer.borderWidth = 3
+        mailboxNewCountLabel.layer.borderColor = UIColor.yellow.cgColor
+        mailboxNewCountLabel.layer.masksToBounds = true
+        
+        if(LetterManager().getLettersCount(profileName: profileInformation.name) > 0) {
+           
+            mailboxNewCountLabel.text = "  \(LetterManager().getLettersCount(profileName: profileInformation.name))  "
+        }
+        else {
+            mailboxNewCountLabel.isHidden = true
+        }
+        
+        
         
         for buttonView in ButtonViews {
             buttonView.layer.cornerRadius = 20
             buttonView.layer.borderWidth = 2
+            buttonView.layer.masksToBounds = true
             
             let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
             
@@ -42,6 +56,16 @@ class ProfileViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
 
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if(LetterManager().getLettersCount(profileName: profileInformation.name) > 0) {
+           
+            mailboxNewCountLabel.text = "  \(LetterManager().getLettersCount(profileName: profileInformation.name))  "
+        }
+        else {
+            mailboxNewCountLabel.isHidden = true
+        }
     }
     
     @objc func handleTapGesture(sender: UITapGestureRecognizer) {
@@ -80,6 +104,7 @@ class ProfileViewController: UIViewController {
             controller.profileInformation = profileInformation
         }
         else if (segue.identifier == "toSettings") {
+            print("name: \(profileInformation.name)")
             let controller = segue.destination as! SettingsViewController
             controller.profileInformation = profileInformation
         }
@@ -88,4 +113,6 @@ class ProfileViewController: UIViewController {
     @IBAction func settingsAction(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "toSettings", sender: nil)
     }
+    
+    @IBAction func unwindToProfileViewController(segue: UIStoryboardSegue) {}
 }

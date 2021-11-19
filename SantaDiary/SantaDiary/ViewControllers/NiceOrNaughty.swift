@@ -10,7 +10,7 @@ import UIKit
 class NiceOrNaughty: UIViewController {
     
     // user info
-    var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
+    var profileInformation: ProfileEntry = ProfileEntry(name: "", image: "", birthDay: Date())
 
     // ui elements
     @IBOutlet weak var profileName: UILabel!
@@ -45,7 +45,7 @@ class NiceOrNaughty: UIViewController {
         prepCardRotation()
         
 
-        profileName.text = "\(profileInformation.name), \(profileInformation.age)"
+        profileName.text = "\(profileInformation.name), \(profileInformation.age())"
         
         // modify ui elements
         

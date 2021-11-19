@@ -10,7 +10,7 @@ import UIKit
 class DiaryViewController: UIViewController {
 
     
-    var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
+    var profileInformation: ProfileEntry = ProfileEntry(name: "", image: "", birthDay: Date())
     
     @IBOutlet weak var monthYearLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!

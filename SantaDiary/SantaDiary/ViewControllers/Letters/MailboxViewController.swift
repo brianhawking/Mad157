@@ -10,17 +10,21 @@ import UIKit
 class MailboxViewController: UIViewController {
 
 
-    var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
+    var profileInformation: ProfileEntry = ProfileEntry(name: "", image: "", birthDay: Date())
+    
+    var letters: [LetterEntry] = []
+    
     
     @IBOutlet weak var tableView: UITableView!
     
-    var results: [(image: String, date: String, message: String)] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // get letters
+        // filemanager to get data
+        getLetters(to: "LetterFromSanta")
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: profileInformation.image), style: .plain, target: nil, action: nil)
     
@@ -30,12 +34,24 @@ class MailboxViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        // give dummy data
-        let image = "OpenEnvelope"
-        results.append((image: "ClosedEnvelope", date: "November 2, 2021", message: "LETTER FROM SANTA"))
-        results.append((image: image, date: "July 2, 2021", message: "Dummy data: This is a message from Santa."))
-        results.append((image: image, date: "October 24, 2021", message: "Dummy data: This is a message from Santa."))
+//        // give dummy data
+//        let image = "OpenEnvelope"
+//        results.append((image: "ClosedEnvelope", date: "November 2, 2021", message: "LETTER FROM SANTA"))
+//        results.append((image: image, date: "July 2, 2021", message: "Dummy data: This is a message from Santa."))
+//        results.append((image: image, date: "October 24, 2021", message: "Dummy data: This is a message from Santa."))
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getLetters(to: "LetterFromSanta")
+        tableView.reloadData()
+    }
+    
+    func getLetters(to: String) {
+        
+        letters = LetterManager().getLetters(profileName: profileInformation.name, to: to)
+        
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,7 +60,7 @@ class MailboxViewController: UIViewController {
             let row = sender as! Int //we know that sender is an NSIndexPath here.
             
             controller.profileInformation = profileInformation
-            controller.dateOfLetter = results[row].date
+            controller.dateOfLetter = letters[row].date
             controller.to = "LetterFromSanta"
         }
     }
@@ -61,7 +77,7 @@ extension MailboxViewController: UITableViewDelegate {
 extension MailboxViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return results.count
+        return letters.count
     }
     
 //    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
@@ -81,24 +97,33 @@ extension MailboxViewController: UITableViewDataSource {
         cell.backgroundColor = .clear
         cell.view.layer.cornerRadius = 20
         
-        if (results[indexPath.row].image == "OpenEnvelope"){
+        var image = ""
+        var message = ""
+        
+        print("letter status: \(letters[indexPath.row].new)")
+        if (letters[indexPath.row].new == false){
             cell.view.layer.borderColor = UIColor.black.cgColor
             cell.view.layer.borderWidth = 2
+            cell.view.layer.shadowRadius = 0
+            cell.view.layer.shadowColor = UIColor.clear.cgColor
+            image = "OpenEnvelope"
+            message = letters[indexPath.row].letter
         }
         else {
             cell.view.layer.borderColor = UIColor.yellow.cgColor
             cell.view.layer.borderWidth = 6
-            cell.view.layer.shadowRadius = 5
             cell.view.layer.shadowColor = UIColor.yellow.cgColor
             cell.view.layer.shadowOpacity = 0.5
             cell.view.layer.shadowOffset = .zero
             cell.view.layer.shadowRadius = 3
+            image = "ClosedEnvelope"
+            message = "NEW Letter from \(letters[indexPath.row].from)"
         }
         
 
-        cell.message.text = results[indexPath.row].message
-        cell.date.text = results[indexPath.row].date
-        cell.avatarImageView.image = UIImage(named: results[indexPath.row].image)
+        cell.message.text = message
+        cell.date.text = letters[indexPath.row].date
+        cell.avatarImageView.image = UIImage(named: image)
         
         
         return cell

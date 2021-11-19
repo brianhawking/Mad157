@@ -12,13 +12,13 @@ class WriteLetterViewController: UIViewController {
     // filemanager
     
     // user info
-    var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
+    var profileInformation: ProfileEntry = ProfileEntry(name: "", image: "", birthDay: Date())
+    var from = ""
     
     // views
     @IBOutlet weak var dearSantaLabel: UILabel!
     @IBOutlet weak var letterTextView: UITextView!
     @IBOutlet weak var reindeerImage: UIImageView!
-    @IBOutlet weak var reindeerImage2: UIImageView!
     @IBOutlet weak var snowmanImage: UIImageView!
     
     var letter: String = ""
@@ -34,6 +34,13 @@ class WriteLetterViewController: UIViewController {
         // view adjustments
         letterTextView.textContainerInset = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
         letterTextView.backgroundColor = UIColor.white
+        
+        if (from == "User") {
+            dearSantaLabel.text = "     Dear Santa"
+        }
+        else {
+            dearSantaLabel.text = "     Dear \(profileInformation.name)"
+        }
         
         
         reindeerImage.transform = reindeerImage.transform.rotated(by: .pi * -1/3)
@@ -91,21 +98,53 @@ class WriteLetterViewController: UIViewController {
         letter = letterTextView.text
         
         // filemanager
-        let letterEntry = LetterEntry(letter: letter)
-        if( LetterManager().saveLetter(
-                profileName: profileInformation.name,
-                entry: letterEntry,
-                to: "LetterToSanta")) {
-            // letter saved
-            completionHandler?(true)
-            
-            // go back
-            self.navigationController?.popViewController(animated: true)
-            
+        var signed = ""
+        if (from == "User") {
+            signed = profileInformation.name
+        }
+        else if from == "Santa" {
+            signed = "Santa"
+        }
+        else if from == "Elves" {
+            signed = "Bob the Elf"
+        }
+        let letterEntry = LetterEntry(letter: letter, from: signed)
+        
+        if(from == "User"){
+            if( LetterManager().saveLetter(
+                    profileName: profileInformation.name,
+                    entry: letterEntry,
+                    to: "LetterToSanta"
+            )) {
+                // letter saved
+                completionHandler?(true)
+                
+                // go back
+                self.navigationController?.popViewController(animated: true)
+                
+            }
+            else {
+                print("Can't go back")
+            }
         }
         else {
-            print("Can't go back")
+            if( LetterManager().saveLetter(
+                    profileName: profileInformation.name,
+                    entry: letterEntry,
+                    to: "LetterFromSanta")) {
+                // letter saved
+                completionHandler?(true)
+                
+                // go back
+                self.navigationController?.popViewController(animated: true)
+                
+            }
+            else {
+                print("Can't go back")
+            }
         }
+        
+        
         
     }
 }

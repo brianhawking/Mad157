@@ -12,15 +12,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var tableview: UITableView!
     @IBOutlet var backgroundView: UIView!
     
-    // dummy data
-    var profileNames = [
-        (name: "Connor", image: "Dino1", age: "4"),
-        (name: "Landon", image: "Ladybug", age: "1"),
-        (name: "Piper", image: "Bee", age: "5")
-    ]
+    var profiles: [ProfileEntry] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // get profile names
+        getProfiles()
         
         // connect to tableview cell
         let nib = UINib(nibName: "ProfileListTableViewCell", bundle: nil)
@@ -28,12 +26,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableview.delegate = self
         tableview.dataSource = self
+        
+        // edit navigation bar
+        navigationController?.navigationBar.tintColor = UIColor.white;
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+       // ProfileManager().changeName(from: "Bill", to: "Judy")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getProfiles()
+        tableview.reloadData()
+    }
+    
+    func getProfiles() {
+        // grab all profiles from documents directory
+        profiles = ProfileManager().getProfiles()
+        
     }
 
 
     // tableview functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return profileNames.count
+        return profiles.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -44,8 +62,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.performSegue(withIdentifier: "toProfileSegue", sender: indexPath);
     }
     
-
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "ProfileListTableViewCell", for: indexPath) as! ProfileListTableViewCell
         
@@ -54,9 +70,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.view.layer.borderColor = UIColor.black.cgColor
         cell.view.layer.cornerRadius = 20
         cell.view.layer.borderWidth = 2
-        cell.name.text = profileNames[indexPath.row].name
-        cell.age.text = profileNames[indexPath.row].age
-        cell.avatarImageView.image = UIImage(named: profileNames[indexPath.row].image)
+        cell.name.text = profiles[indexPath.row].name
+        cell.age.text = profiles[indexPath.row].age()
+        cell.avatarImageView.image = UIImage(named: profiles[indexPath.row].image)
         return cell
     }
     
@@ -66,7 +82,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let controller = segue.destination as! ProfileViewController
             let row = (sender as! NSIndexPath).row; //we know that sender is an NSIndexPath here.
             print(row)
-            controller.profileInformation = profileNames[row]
+            let profile = profiles[row]
+//            controller.profileInformation = (name: profile.name, image: profile.image, age: profile.age)
+            controller.profileInformation = profiles[row]
+
         }
     }
     

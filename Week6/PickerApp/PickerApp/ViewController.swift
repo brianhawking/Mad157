@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var myPicker: UIPickerView!
-    var pickerData: [String] = []
+    var pickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

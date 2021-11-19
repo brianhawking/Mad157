@@ -9,7 +9,7 @@ import UIKit
 
 class PasswordViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     
-    var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
+    var profileInformation: ProfileEntry = ProfileEntry(name: "", image: "", birthDay: Date())
 
     var password = "2222"
     
@@ -23,12 +23,22 @@ class PasswordViewController: UIViewController, UITextViewDelegate, UITextFieldD
 
         // Do any additional setup after loading the view.
         
+        print("name: \(profileInformation.name)")
+        
         hiddenTextField.delegate = self
         hiddenTextField.becomeFirstResponder()
         hiddenTextField.isHidden = true
         
         for box in digits {
             box.layer.cornerRadius = 10
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toForParents") {
+            let controller = segue.destination as! ForParentsViewController
+            
+            controller.profileInformation = profileInformation
         }
     }
     

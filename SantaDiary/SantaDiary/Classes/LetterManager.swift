@@ -15,8 +15,10 @@ public struct LetterEntry: Codable {
     public var day: Int
     public var date: String
     public var letter: String
+    public var new: Bool
+    public var from: String
     
-    init(letter: String) {
+    init(letter: String, from: String) {
 
         // get current day and time
         let date = Date()
@@ -38,6 +40,8 @@ public struct LetterEntry: Codable {
         self.day = day
         self.date = time
         self.letter = letter
+        self.new = true
+        self.from = from
     
         print("You successfully created a diary entry object.")
     }
@@ -158,6 +162,14 @@ struct LetterManager {
                     let data = try Data(contentsOf: URL(fileURLWithPath: newPath.path))
                     let entry = try JSONDecoder().decode(LetterEntry.self, from: data)
                     
+                    // update letter status
+                    // change status of letter -> new = false
+                    var updatedLetter = entry
+                    updatedLetter.new = false
+                    if(saveLetter(profileName: profileName, entry: updatedLetter, to: to)) {
+                        print("letter status updated")
+                    }
+                    
                     // return letter text
                     if to == "LetterFromSanta" {
                         return "Dear \(profileName), \n\n\(entry.letter)"
@@ -165,7 +177,7 @@ struct LetterManager {
                     else {
                         return "Dear Santa, \n\n\(entry.letter)"
                     }
-            
+                    
                 }
                 catch {
                     print("error. Could not retrieve letter.")
@@ -175,10 +187,10 @@ struct LetterManager {
         return "Letter is missing."
     }
     
-    func getLetters(profileName: String, to: String) -> [(date: String, letter: String)] {
+    func getLetters(profileName: String, to: String) -> [LetterEntry] {
         
         // empty array for letters
-        var letters: [(date: String, letter: String)] = []
+        var letters: [LetterEntry] = []
         
         let pathToLetters = FileManager.default.urls(for: .documentDirectory, in:
             .userDomainMask)[0]
@@ -250,7 +262,7 @@ struct LetterManager {
                 let data = try Data(contentsOf: URL(fileURLWithPath: newPath.path))
                 let entry = try JSONDecoder().decode(LetterEntry.self, from: data)
                 
-                letters.append((entry.date, entry.letter))
+                letters.append(entry)
         
             }
             catch {
@@ -263,5 +275,18 @@ struct LetterManager {
     }
 
     
+    func getLettersCount(profileName: String) -> Int {
+        
+        var count = 0
+        let letters = getLetters(profileName: profileName, to: "LetterFromSanta")
+        
+        for letter in letters {
+            if (letter.new == true) {
+                count += 1
+            }
+        }
+        
+        return count
+    }
     
 }

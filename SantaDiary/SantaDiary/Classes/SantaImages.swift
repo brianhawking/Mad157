@@ -11,8 +11,9 @@ import UIKit
 struct SantaImages {
     
     var avatar: [String] = [
-        "Bee", "Dino1", "Ladybuy", "Snowman"
+        "Bee", "Dino1", "Ladybug", "Snowman","Bee", "Dino1", "Ladybug", "Snowman","Bee", "Dino1", "Ladybug", "Snowman"
     ]
+    
     
     var envelop: [String: String] = [
         "open": "OpenEnvelope",

@@ -9,9 +9,9 @@ import UIKit
 
 class LettersToSantaViewController: UIViewController {
 
-    var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
+    var profileInformation: ProfileEntry = ProfileEntry(name: "", image: "", birthDay: Date())
 
-    var letters: [(date: String, letter: String)] = []
+    var letters: [LetterEntry] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -53,7 +53,7 @@ class LettersToSantaViewController: UIViewController {
             let controller = segue.destination as! WriteLetterViewController
             
             controller.profileInformation = profileInformation
-            
+            controller.from = "User"
             controller.completionHandler = { b in
                 self.getLetters(to: "LetterToSanta")
                 self.tableView.reloadData()

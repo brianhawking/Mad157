@@ -18,6 +18,10 @@
 		F7484AAF26E91251008B36E1 /* ProfileListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7484AAD26E91251008B36E1 /* ProfileListTableViewCell.swift */; };
 		F7484AB026E91251008B36E1 /* ProfileListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7484AAE26E91251008B36E1 /* ProfileListTableViewCell.xib */; };
 		F7484AB226E928D0008B36E1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7484AB126E928D0008B36E1 /* ProfileViewController.swift */; };
+		F749E9BB2746A6CD00196D4D /* AddProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F749E9BA2746A6CD00196D4D /* AddProfileViewController.swift */; };
+		F749E9BF2746AD7800196D4D /* AvatarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F749E9BE2746AD7800196D4D /* AvatarCollectionViewCell.swift */; };
+		F749E9C12746B72D00196D4D /* SelectAvatarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F749E9C02746B72D00196D4D /* SelectAvatarCollectionViewController.swift */; };
+		F749E9C32746C1C400196D4D /* ACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F749E9C22746C1C400196D4D /* ACollectionViewCell.swift */; };
 		F75B322C2732DFEE00EB3C12 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75B322B2732DFEE00EB3C12 /* Colors.swift */; };
 		F75B32622732EC7E00EB3C12 /* LetterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75B32612732EC7E00EB3C12 /* LetterManager.swift */; };
 		F75B32802733130000EB3C12 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75B32652733130000EB3C12 /* IQTextView.swift */; };
@@ -63,6 +67,7 @@
 		F7A3D7FE2735829D0019B134 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3D7FD2735829D0019B134 /* Strings.swift */; };
 		F7A3D80027358AEF0019B134 /* ForParentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3D7FF27358AEF0019B134 /* ForParentsViewController.swift */; };
 		F7D4750426EA5ADB0052A0EA /* NiceOrNaughty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */; };
+		F7DB7D092746CE6D00A9F135 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DB7D082746CE6D00A9F135 /* ProfileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +105,10 @@
 		F7484AAD26E91251008B36E1 /* ProfileListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListTableViewCell.swift; sourceTree = "<group>"; };
 		F7484AAE26E91251008B36E1 /* ProfileListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileListTableViewCell.xib; sourceTree = "<group>"; };
 		F7484AB126E928D0008B36E1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F749E9BA2746A6CD00196D4D /* AddProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProfileViewController.swift; sourceTree = "<group>"; };
+		F749E9BE2746AD7800196D4D /* AvatarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCollectionViewCell.swift; sourceTree = "<group>"; };
+		F749E9C02746B72D00196D4D /* SelectAvatarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAvatarCollectionViewController.swift; sourceTree = "<group>"; };
+		F749E9C22746C1C400196D4D /* ACollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACollectionViewCell.swift; sourceTree = "<group>"; };
 		F75B322B2732DFEE00EB3C12 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F75B32612732EC7E00EB3C12 /* LetterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterManager.swift; sourceTree = "<group>"; };
 		F75B32652733130000EB3C12 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
@@ -146,6 +155,7 @@
 		F7A3D7FD2735829D0019B134 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F7A3D7FF27358AEF0019B134 /* ForParentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForParentsViewController.swift; sourceTree = "<group>"; };
 		F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceOrNaughty.swift; sourceTree = "<group>"; };
+		F7DB7D082746CE6D00A9F135 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +183,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F742ABBD273D71EE003901AC /* Letters */ = {
+			isa = PBXGroup;
+			children = (
+				F793BD0A271C9606004B991C /* LettersToSantaViewController.swift */,
+				F793BD0C271C9632004B991C /* MailboxViewController.swift */,
+				F76875792727238A00B55B2D /* ShowLetterFromSanta.swift */,
+				F768757B2728925F00B55B2D /* WriteLetterViewController.swift */,
+			);
+			path = Letters;
+			sourceTree = "<group>";
+		};
+		F742ABBE273D7206003901AC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F7A3D7FF27358AEF0019B134 /* ForParentsViewController.swift */,
+				F7A3D7FA2734E8F30019B134 /* PasswordViewController.swift */,
+				F7A3D7F42734D68B0019B134 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F742ABBF273D7232003901AC /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				F793BD08271C931E004B991C /* DiaryViewController.swift */,
+				F768757D272A405600B55B2D /* AddDiaryOneViewController.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
 		F7484A6F26E8E8F9008B36E1 = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +274,7 @@
 		F7484AB326E92F28008B36E1 /* Custom TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F749E9BE2746AD7800196D4D /* AvatarCollectionViewCell.swift */,
 				F76875732726004900B55B2D /* SantaLetterCell.swift */,
 				F76875742726004900B55B2D /* SantaLetterCell.xib */,
 				F7484AAD26E91251008B36E1 /* ProfileListTableViewCell.swift */,
@@ -241,6 +282,18 @@
 				F7484AAE26E91251008B36E1 /* ProfileListTableViewCell.xib */,
 			);
 			path = "Custom TableView Cells";
+			sourceTree = "<group>";
+		};
+		F749E9B72746A45D00196D4D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F749E9C02746B72D00196D4D /* SelectAvatarCollectionViewController.swift */,
+				F749E9C22746C1C400196D4D /* ACollectionViewCell.swift */,
+				F749E9BA2746A6CD00196D4D /* AddProfileViewController.swift */,
+				F7484A7F26E8E8F9008B36E1 /* ListofProfiles.swift */,
+				F7484AB126E928D0008B36E1 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		F75B32632733130000EB3C12 /* IQKeyboardManagerSwift */ = {
@@ -314,6 +367,7 @@
 				F75B322B2732DFEE00EB3C12 /* Colors.swift */,
 				F768757727270E8A00B55B2D /* MonthDate.swift */,
 				F75B32612732EC7E00EB3C12 /* LetterManager.swift */,
+				F7DB7D082746CE6D00A9F135 /* ProfileManager.swift */,
 				F75B329727332EA000EB3C12 /* SantaImages.swift */,
 			);
 			path = Classes;
@@ -339,18 +393,11 @@
 		F7FACC5F26F4CAC200AFF909 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F7484A7F26E8E8F9008B36E1 /* ListofProfiles.swift */,
-				F793BD0A271C9606004B991C /* LettersToSantaViewController.swift */,
-				F793BD0C271C9632004B991C /* MailboxViewController.swift */,
+				F749E9B72746A45D00196D4D /* Profile */,
+				F742ABBF273D7232003901AC /* Diary */,
+				F742ABBE273D7206003901AC /* Settings */,
+				F742ABBD273D71EE003901AC /* Letters */,
 				F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */,
-				F793BD08271C931E004B991C /* DiaryViewController.swift */,
-				F76875792727238A00B55B2D /* ShowLetterFromSanta.swift */,
-				F768757B2728925F00B55B2D /* WriteLetterViewController.swift */,
-				F768757D272A405600B55B2D /* AddDiaryOneViewController.swift */,
-				F7484AB126E928D0008B36E1 /* ProfileViewController.swift */,
-				F7A3D7FF27358AEF0019B134 /* ForParentsViewController.swift */,
-				F7A3D7FA2734E8F30019B134 /* PasswordViewController.swift */,
-				F7A3D7F42734D68B0019B134 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -496,9 +543,11 @@
 				F75B32922733130000EB3C12 /* IQUIViewController+Additions.swift in Sources */,
 				F7A3D80027358AEF0019B134 /* ForParentsViewController.swift in Sources */,
 				F75B328E2733130000EB3C12 /* IQKeyboardManager+Debug.swift in Sources */,
+				F749E9C12746B72D00196D4D /* SelectAvatarCollectionViewController.swift in Sources */,
 				F7A3D7F52734D68B0019B134 /* SettingsViewController.swift in Sources */,
 				F768757A2727238A00B55B2D /* ShowLetterFromSanta.swift in Sources */,
 				F7484AAF26E91251008B36E1 /* ProfileListTableViewCell.swift in Sources */,
+				F749E9BB2746A6CD00196D4D /* AddProfileViewController.swift in Sources */,
 				F75B32892733130000EB3C12 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				F768757E272A405600B55B2D /* AddDiaryOneViewController.swift in Sources */,
 				F75B32812733130000EB3C12 /* IQKeyboardManager+Internal.swift in Sources */,
@@ -516,6 +565,7 @@
 				F768757827270E8A00B55B2D /* MonthDate.swift in Sources */,
 				F793BD0D271C9632004B991C /* MailboxViewController.swift in Sources */,
 				F793BD0F271C9BE6004B991C /* AddButton.swift in Sources */,
+				F749E9C32746C1C400196D4D /* ACollectionViewCell.swift in Sources */,
 				F75B32902733130000EB3C12 /* IQKeyboardManager+Toolbar.swift in Sources */,
 				F75B32962733130000EB3C12 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
 				F76875752726004900B55B2D /* SantaLetterCell.swift in Sources */,
@@ -527,7 +577,9 @@
 				F75B32932733130000EB3C12 /* IQUITextFieldView+Additions.swift in Sources */,
 				F793BD0B271C9606004B991C /* LettersToSantaViewController.swift in Sources */,
 				F75B32942733130000EB3C12 /* IQUIView+Hierarchy.swift in Sources */,
+				F7DB7D092746CE6D00A9F135 /* ProfileManager.swift in Sources */,
 				F7A3D7F92734E41F0019B134 /* FakecellViewController.swift in Sources */,
+				F749E9BF2746AD7800196D4D /* AvatarCollectionViewCell.swift in Sources */,
 				F75B32822733130000EB3C12 /* IQPreviousNextView.swift in Sources */,
 				F75B328D2733130000EB3C12 /* IQKeyboardManager.swift in Sources */,
 				F7484A7E26E8E8F9008B36E1 /* SceneDelegate.swift in Sources */,

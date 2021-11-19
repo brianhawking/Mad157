@@ -10,7 +10,7 @@ import UIKit
 class ShowLetterFromSanta: UIViewController {
     
     // user info
-    var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
+    var profileInformation: ProfileEntry = ProfileEntry(name: "", image: "", birthDay: Date())
     
     var dateOfLetter: String = ""
     var to: String = "LetterToSanta"

@@ -9,13 +9,13 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    var profileInformation: (name: String, image: String, age: String) = (name: "", image: "", age: "")
+    var profileInformation: ProfileEntry = ProfileEntry(name: "", image: "", birthDay: Date())
 
     @IBOutlet weak var tableView: UITableView!
     
     let tableViewCells = ["Change name", "Change avatar", "For parents"]
     
-    let tableViewSegues = ["toPasscode", "toPasscode", "toPasscode"]
+    let tableViewSegues = ["toPassword", "toPassword", "toPassword"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class SettingsViewController: UIViewController {
         
         
         switch segue.identifier {
-        case "toPasscode":
+        case "toPassword":
             let controller = segue.destination as! PasswordViewController
             controller.profileInformation = profileInformation
         default:
