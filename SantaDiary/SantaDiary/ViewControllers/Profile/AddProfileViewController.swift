@@ -12,29 +12,31 @@ import UIKit
 class AddProfileViewController: UIViewController, UINavigationControllerDelegate {
 
     
+    @IBOutlet weak var profileDetailsView: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameTextView: UITextField!
     @IBOutlet weak var birthdayDatePicker: UIDatePicker!
     let dateFormatter: DateFormatter = DateFormatter()
-    var imageNumber = 0
+    var imageNumber = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        birthdayDatePicker.setValue(UIColor.white, forKeyPath: "textColor")
-        birthdayDatePicker.setValue(false, forKeyPath: "highlightsToday")
+//        birthdayDatePicker.setValue(UIColor.white, forKeyPath: "textColor")
+//        birthdayDatePicker.setValue(false, forKeyPath: "highlightsToday")
         
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .none
-        birthdayDatePicker.preferredDatePickerStyle = .wheels
+//        birthdayDatePicker.preferredDatePickerStyle = .wheels
         
         avatarImageView.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self, action: #selector(changeProfilePicture))
         gesture.numberOfTouchesRequired = 1
         avatarImageView.addGestureRecognizer(gesture)
         
-        avatarImageView.layer.cornerRadius = avatarImageView.frame.width/2
-
+//        avatarImageView.layer.cornerRadius = avatarImageView.frame.width/2
+        
+        profileDetailsView.layer.cornerRadius = 10
     }
     
     @objc func changeProfilePicture() {
@@ -42,20 +44,21 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
         presentPhotoActionSheet()
     }
     
-
-    @IBAction func saveAction(_ sender: UIButton) {
+   
+    
+    @IBAction func saveButton(_ sender: Any) {
         if (nameTextView.text == "") {
             print("Enter a name")
             return
         }
-        else if (avatarImageView.image == UIImage(named: "person.fill.badge.plus")) {
+        else if (imageNumber == -1) {
             print("Choose a photo")
             return
         }
         // create profile
         createProfile()
     }
-
+    
     
     func createProfile() {
         

@@ -59,7 +59,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toProfileSegue", sender: indexPath);
+        self.performSegue(withIdentifier: "toProfileSegue", sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,7 +82,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let controller = segue.destination as! ProfileViewController
             let row = (sender as! NSIndexPath).row; //we know that sender is an NSIndexPath here.
             print(row)
-            let profile = profiles[row]
 //            controller.profileInformation = (name: profile.name, image: profile.image, age: profile.age)
             controller.profileInformation = profiles[row]
 

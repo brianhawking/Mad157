@@ -66,6 +66,10 @@
 		F7A3D7FB2734E8F30019B134 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3D7FA2734E8F30019B134 /* PasswordViewController.swift */; };
 		F7A3D7FE2735829D0019B134 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3D7FD2735829D0019B134 /* Strings.swift */; };
 		F7A3D80027358AEF0019B134 /* ForParentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3D7FF27358AEF0019B134 /* ForParentsViewController.swift */; };
+		F7B48C13274C07E300D16F16 /* CreateProfielViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B48C12274C07E300D16F16 /* CreateProfielViewController.swift */; };
+		F7B48C15274C09C900D16F16 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B48C14274C09C900D16F16 /* TextFieldTableViewCell.swift */; };
+		F7B48C17274C0A0200D16F16 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B48C16274C0A0200D16F16 /* DatePickerTableViewCell.swift */; };
+		F7B48C19274C0E6900D16F16 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B48C18274C0E6900D16F16 /* BirthdayViewController.swift */; };
 		F7D4750426EA5ADB0052A0EA /* NiceOrNaughty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */; };
 		F7DB7D092746CE6D00A9F135 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DB7D082746CE6D00A9F135 /* ProfileManager.swift */; };
 /* End PBXBuildFile section */
@@ -154,6 +158,10 @@
 		F7A3D7FA2734E8F30019B134 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		F7A3D7FD2735829D0019B134 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F7A3D7FF27358AEF0019B134 /* ForParentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForParentsViewController.swift; sourceTree = "<group>"; };
+		F7B48C12274C07E300D16F16 /* CreateProfielViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfielViewController.swift; sourceTree = "<group>"; };
+		F7B48C14274C09C900D16F16 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		F7B48C16274C0A0200D16F16 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		F7B48C18274C0E6900D16F16 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceOrNaughty.swift; sourceTree = "<group>"; };
 		F7DB7D082746CE6D00A9F135 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,6 +295,10 @@
 		F749E9B72746A45D00196D4D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F7B48C12274C07E300D16F16 /* CreateProfielViewController.swift */,
+				F7B48C18274C0E6900D16F16 /* BirthdayViewController.swift */,
+				F7B48C14274C09C900D16F16 /* TextFieldTableViewCell.swift */,
+				F7B48C16274C0A0200D16F16 /* DatePickerTableViewCell.swift */,
 				F749E9C02746B72D00196D4D /* SelectAvatarCollectionViewController.swift */,
 				F749E9C22746C1C400196D4D /* ACollectionViewCell.swift */,
 				F749E9BA2746A6CD00196D4D /* AddProfileViewController.swift */,
@@ -534,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7B48C13274C07E300D16F16 /* CreateProfielViewController.swift in Sources */,
 				F7D4750426EA5ADB0052A0EA /* NiceOrNaughty.swift in Sources */,
 				F7687580272A414C00B55B2D /* nextSaveButton.swift in Sources */,
 				F75B328F2733130000EB3C12 /* IQKeyboardManager+OrientationNotification.swift in Sources */,
@@ -577,6 +590,8 @@
 				F75B32932733130000EB3C12 /* IQUITextFieldView+Additions.swift in Sources */,
 				F793BD0B271C9606004B991C /* LettersToSantaViewController.swift in Sources */,
 				F75B32942733130000EB3C12 /* IQUIView+Hierarchy.swift in Sources */,
+				F7B48C17274C0A0200D16F16 /* DatePickerTableViewCell.swift in Sources */,
+				F7B48C19274C0E6900D16F16 /* BirthdayViewController.swift in Sources */,
 				F7DB7D092746CE6D00A9F135 /* ProfileManager.swift in Sources */,
 				F7A3D7F92734E41F0019B134 /* FakecellViewController.swift in Sources */,
 				F749E9BF2746AD7800196D4D /* AvatarCollectionViewCell.swift in Sources */,
@@ -584,6 +599,7 @@
 				F75B328D2733130000EB3C12 /* IQKeyboardManager.swift in Sources */,
 				F7484A7E26E8E8F9008B36E1 /* SceneDelegate.swift in Sources */,
 				F768756E2725EC3100B55B2D /* DiaryEntry.swift in Sources */,
+				F7B48C15274C09C900D16F16 /* TextFieldTableViewCell.swift in Sources */,
 				F75B32912733130000EB3C12 /* IQUIScrollView+Additions.swift in Sources */,
 				F75B329827332EA000EB3C12 /* SantaImages.swift in Sources */,
 				F75B328A2733130000EB3C12 /* IQKeyboardManagerConstants.swift in Sources */,

@@ -43,7 +43,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3u4-ko-P3U" kind="show" id="S9f-lu-Vdy"/>
+                                    <segue destination="fSB-ON-KWi" kind="show" id="aMk-sZ-nqU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,87 +69,113 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="75"/>
         </scene>
-        <!--Create Profile-->
-        <scene sceneID="lvw-Lf-xgh">
+        <!--Add Profile View Controller-->
+        <scene sceneID="xWT-Re-hNF">
             <objects>
-                <viewController id="3u4-ko-P3U" customClass="AddProfileViewController" customModule="SantaDiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c5y-Ic-025" customClass="GradientView" customModule="SantaDiary" customModuleProvider="target">
+                <viewController id="fSB-ON-KWi" customClass="AddProfileViewController" customModule="SantaDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5eb-uS-P5L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PsW-Gw-zkn">
-                                <rect key="frame" x="20" y="118" width="374" height="724"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="K1M-g6-RVy">
+                                <rect key="frame" x="104.66666666666667" y="140" width="202.33333333333331" height="199.66666666666669"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="IWH-5e-oWG"/>
+                                    <constraint firstAttribute="height" constant="200" id="RC1-hF-5gl"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80O-k3-3UH">
+                                <rect key="frame" x="20" y="378" width="374" height="120"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yfm-kg-L6T">
-                                        <rect key="frame" x="84.666666666666671" y="2" width="202.33333333333331" height="199.66666666666669"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="Nzf-73-bqR"/>
-                                            <constraint firstAttribute="height" constant="200" id="rb4-vk-dtD"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEz-gu-wV7">
-                                        <rect key="frame" x="140" y="244.00000000000003" width="94.333333333333314" height="44.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lqM-c2-FhP">
-                                        <rect key="frame" x="20" y="332.33333333333331" width="334" height="43.333333333333314"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of7-Ek-rS8">
-                                        <rect key="frame" x="120.66666666666667" y="419.66666666666663" width="132.66666666666663" height="44.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="1jv-nL-HQ2">
-                                        <rect key="frame" x="27" y="508" width="320" height="216"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bjr-so-PFJ">
+                                        <rect key="frame" x="20" y="0.0" width="334" height="120"/>
                                         <subviews>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="sbr-yO-87G">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
-                                                <color key="backgroundColor" red="0.90588235859999999" green="0.86666667460000002" blue="0.75686275960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </datePicker>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-yL-3Hy">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="59.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="equ-WX-WAn">
+                                                <rect key="frame" x="0.0" y="59.666666666666686" width="334" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="rhi-nS-zDL"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="WVv-aX-TVn">
+                                                <rect key="frame" x="0.0" y="60.666666666666686" width="334" height="59.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf7-OJ-EdC">
+                                                        <rect key="frame" x="0.0" y="16.333333333333314" width="154" height="26.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="38Y-Ms-rEU">
+                                                        <rect key="frame" x="180" y="4.6666666666666288" width="154" height="50"/>
+                                                    </datePicker>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="equ-WX-WAn" firstAttribute="leading" secondItem="bjr-so-PFJ" secondAttribute="leading" id="5wD-qJ-dmi"/>
+                                            <constraint firstItem="WVv-aX-TVn" firstAttribute="leading" secondItem="bjr-so-PFJ" secondAttribute="leading" id="ETM-GO-o1N"/>
+                                            <constraint firstAttribute="trailing" secondItem="equ-WX-WAn" secondAttribute="trailing" id="J5x-sw-Hpf"/>
+                                            <constraint firstItem="zK4-yL-3Hy" firstAttribute="leading" secondItem="bjr-so-PFJ" secondAttribute="leading" id="WVt-db-bTY"/>
+                                            <constraint firstAttribute="trailing" secondItem="zK4-yL-3Hy" secondAttribute="trailing" id="hrg-K0-7Dd"/>
+                                            <constraint firstItem="equ-WX-WAn" firstAttribute="centerY" secondItem="bjr-so-PFJ" secondAttribute="centerY" id="uxk-dR-MP0"/>
+                                            <constraint firstAttribute="trailing" secondItem="WVv-aX-TVn" secondAttribute="trailing" id="vNx-dC-fER"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="lqM-c2-FhP" firstAttribute="leading" secondItem="PsW-Gw-zkn" secondAttribute="leading" constant="20" id="3i2-NX-jGS"/>
-                                    <constraint firstAttribute="trailing" secondItem="lqM-c2-FhP" secondAttribute="trailing" constant="20" id="aeu-pC-NNW"/>
+                                    <constraint firstItem="bjr-so-PFJ" firstAttribute="leading" secondItem="80O-k3-3UH" secondAttribute="leading" constant="20" id="3Jf-nj-8mY"/>
+                                    <constraint firstItem="bjr-so-PFJ" firstAttribute="top" secondItem="80O-k3-3UH" secondAttribute="top" id="3lQ-TE-F0W"/>
+                                    <constraint firstAttribute="trailing" secondItem="bjr-so-PFJ" secondAttribute="trailing" constant="20" id="Wnf-yE-cRg"/>
+                                    <constraint firstAttribute="bottom" secondItem="bjr-so-PFJ" secondAttribute="bottom" id="sf3-wI-QFX"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="yMn-29-W13"/>
                                 </constraints>
-                            </stackView>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reindeer" translatesAutoresizingMaskIntoConstraints="NO" id="NKd-lE-jc8">
+                                <rect key="frame" x="87" y="662" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="1LZ-07-TR3"/>
+                                    <constraint firstAttribute="height" constant="240" id="iK3-Gg-hBT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="2NY-Xi-BdK"/>
+                        <viewLayoutGuide key="safeArea" id="Ud7-hX-NaE"/>
                         <color key="backgroundColor" red="0.12941176469999999" green="0.43529411759999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2NY-Xi-BdK" firstAttribute="trailing" secondItem="PsW-Gw-zkn" secondAttribute="trailing" constant="20" id="6mr-Zo-SAK"/>
-                            <constraint firstItem="PsW-Gw-zkn" firstAttribute="leading" secondItem="c5y-Ic-025" secondAttribute="leading" constant="20" id="Cwu-Tf-dtw"/>
-                            <constraint firstItem="PsW-Gw-zkn" firstAttribute="top" secondItem="2NY-Xi-BdK" secondAttribute="top" constant="30" id="WnR-Wd-1TI"/>
-                            <constraint firstItem="2NY-Xi-BdK" firstAttribute="bottom" secondItem="PsW-Gw-zkn" secondAttribute="bottom" constant="20" id="efT-bq-L7h"/>
+                            <constraint firstItem="80O-k3-3UH" firstAttribute="top" secondItem="K1M-g6-RVy" secondAttribute="bottom" constant="40" id="3mf-BY-V1h"/>
+                            <constraint firstItem="NKd-lE-jc8" firstAttribute="bottom" secondItem="Ud7-hX-NaE" secondAttribute="bottom" constant="40" id="5pc-uQ-OAh"/>
+                            <constraint firstItem="Ud7-hX-NaE" firstAttribute="trailing" secondItem="80O-k3-3UH" secondAttribute="trailing" constant="20" id="8dS-dk-ecb"/>
+                            <constraint firstItem="K1M-g6-RVy" firstAttribute="centerX" secondItem="5eb-uS-P5L" secondAttribute="centerX" id="8ux-C6-iln"/>
+                            <constraint firstItem="NKd-lE-jc8" firstAttribute="centerX" secondItem="5eb-uS-P5L" secondAttribute="centerX" id="JQo-VC-EOp"/>
+                            <constraint firstItem="K1M-g6-RVy" firstAttribute="top" secondItem="Ud7-hX-NaE" secondAttribute="top" constant="50" id="RTn-O7-1jV"/>
+                            <constraint firstItem="80O-k3-3UH" firstAttribute="leading" secondItem="Ud7-hX-NaE" secondAttribute="leading" constant="20" id="gNH-m8-B25"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Profile" largeTitleDisplayMode="always" id="ApP-vQ-kr0">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="bob-FR-gzU">
+                    <navigationItem key="navigationItem" id="gAW-YE-Dbg">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZjC-60-1lE">
                             <connections>
-                                <action selector="saveAction:" destination="3u4-ko-P3U" id="aKN-SC-qm2"/>
+                                <action selector="saveButton:" destination="fSB-ON-KWi" id="nbx-Hk-f32"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="avatarImageView" destination="Yfm-kg-L6T" id="XOG-Ry-rPd"/>
-                        <outlet property="birthdayDatePicker" destination="sbr-yO-87G" id="LtZ-b3-Yc5"/>
-                        <outlet property="nameTextView" destination="lqM-c2-FhP" id="Ydi-wY-HZX"/>
-                        <segue destination="exO-Q9-e4O" kind="show" identifier="toAvatarsSegue" id="pCm-TJ-eQ0"/>
+                        <outlet property="avatarImageView" destination="K1M-g6-RVy" id="z7I-Nw-MQv"/>
+                        <outlet property="birthdayDatePicker" destination="38Y-Ms-rEU" id="ond-Pf-tiq"/>
+                        <outlet property="nameTextView" destination="zK4-yL-3Hy" id="3fJ-xI-zgT"/>
+                        <outlet property="profileDetailsView" destination="80O-k3-3UH" id="faN-qx-Gbk"/>
+                        <segue destination="exO-Q9-e4O" kind="show" identifier="toAvatarsSegue" id="7Gb-Ut-2KZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TO8-BC-Tpe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h90-Ay-hJt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="963.61607142857133"/>
+            <point key="canvasLocation" x="282.60869565217394" y="980.35714285714278"/>
         </scene>
         <!--Choose Avatar-->
         <scene sceneID="QWt-qm-mV8">
@@ -190,7 +216,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWb-4T-xmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="1708"/>
+            <point key="canvasLocation" x="1048" y="980"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="Hxl-ZA-30F">
@@ -1246,7 +1272,7 @@ Love, Santa</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="dDZ-O3-rZu"/>
-        <segue reference="riG-cm-6U6"/>
+        <segue reference="IEY-e2-VSN"/>
         <segue reference="Gpf-l0-F0R"/>
     </inferredMetricsTieBreakers>
     <resources>
