@@ -142,13 +142,51 @@ extension AddProfileViewController: UIImagePickerControllerDelegate {
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print(info)
+        
         picker.dismiss(animated: true, completion: nil)
         
+        // set the path to where you want the photo to be saved
+        let path = FileManager.default.urls(
+            for: .documentDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("Users")
+            .appendingPathComponent("Connor")
+            .appendingPathComponent("profilePic.png")
+        
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        let data = image.pngData()! as NSData
+        data.write(toFile: path.path, atomically: true)
+            //let imageData = NSData(contentsOfFile: localPath!)!
+        let photoURL = URL.init(fileURLWithPath: path.path)
+        
+        print(photoURL)
+        
+        
+        //let url = info[UIImagePickerController.InfoKey.imageURL]!
+                
+                //let name = (url as! URL).lastPathComponent
+        
+//        if let imgUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL{
+//                let imgName = imgUrl.lastPathComponent
+//                let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+//                let localPath = documentDirectory?
+//                    .appending(imgName)
+//
+//            let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+//            let data = image.pngData()! as NSData
+//                data.write(toFile: localPath!, atomically: true)
+//                //let imageData = NSData(contentsOfFile: localPath!)!
+//                let photoURL = URL.init(fileURLWithPath: localPath!)//NSURL(fileURLWithPath: localPath!)
+//            print("")
+//                print(photoURL)
+//
+//            }
+//
         guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
             return
         }
         
         self.avatarImageView.image = selectedImage
+        
+        
     }
 }
