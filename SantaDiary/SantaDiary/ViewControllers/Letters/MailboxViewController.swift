@@ -26,7 +26,9 @@ class MailboxViewController: UIViewController {
         // filemanager to get data
         getLetters(to: "LetterFromSanta")
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: profileInformation.image), style: .plain, target: nil, action: nil)
+        profileInformation.image = ProfileManager().getProfileImage(profileName: profileInformation.name)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(contentsOfFile: profileInformation.image), style: .plain, target: nil, action: nil)
     
         // tableview
         let nib  = UINib(nibName: "SantaLetterCell", bundle:  nil)

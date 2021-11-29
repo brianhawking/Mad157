@@ -22,9 +22,16 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         profileNameLabel.text = profileInformation.name
-        profileImage.image = UIImage(named: profileInformation.image)
+        profileImage.image = UIImage(contentsOfFile: ProfileManager().getProfileImage(profileName: profileInformation.name))
         
-        mailboxNewCountLabel.layer.cornerRadius = 10
+//        profileImage.layer.cornerRadius = profileImage.layer.frame.height/2
+//        profileImage.clipsToBounds = true
+//        profileImage.layer.borderWidth = 3
+//        profileImage.layer.borderColor = UIColor.black.cgColor
+        
+        
+        
+        mailboxNewCountLabel.layer.cornerRadius = mailboxNewCountLabel.layer.frame.height/2
         mailboxNewCountLabel.layer.borderWidth = 3
         mailboxNewCountLabel.layer.borderColor = UIColor.yellow.cgColor
         mailboxNewCountLabel.layer.masksToBounds = true
@@ -55,7 +62,13 @@ class ProfileViewController: UIViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
 
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.title = profileInformation.name
+        profileNameLabel.isHidden = true
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "Noteworthy Bold", size: 50) ?? UIFont.systemFont(ofSize: 40)
+        ]
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

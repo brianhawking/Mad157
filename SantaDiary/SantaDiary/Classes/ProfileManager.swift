@@ -33,6 +33,30 @@ public struct ProfileEntry: Codable {
 struct ProfileManager {
     init() {}
     
+    // get path to user's profile
+    func getProfileImage(profileName: String) -> String {
+        let path = FileManager.default.urls(for: .documentDirectory, in:
+            .userDomainMask)[0]
+            .appendingPathComponent("Users")
+            .appendingPathComponent(profileName)
+            .appendingPathComponent("profilePic.png")
+        
+        return path.path
+    }
+    
+    func deleteAll() {
+        let path = FileManager.default.urls(for: .documentDirectory, in:
+            .userDomainMask)[0]
+            .appendingPathComponent("Users")
+        
+        do {
+            try FileManager.default.removeItem(atPath: path.path)
+        }
+        catch {
+            print(error)
+        }
+    }
+    
     // checks if the user exists.
     func userExists(profile: ProfileEntry) -> Bool {
         // check if a folder exists in Users

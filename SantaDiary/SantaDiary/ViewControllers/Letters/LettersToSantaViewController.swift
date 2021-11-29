@@ -13,6 +13,8 @@ class LettersToSantaViewController: UIViewController {
 
     var letters: [LetterEntry] = []
     
+    var initialViewing = true
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,9 +23,9 @@ class LettersToSantaViewController: UIViewController {
         // filemanager to get data
         getLetters(to: "LetterToSanta")
         
+        profileInformation.image = ProfileManager().getProfileImage(profileName: profileInformation.name)
         
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: profileInformation.image), style: .plain, target: nil, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(contentsOfFile: profileInformation.image), style: .plain, target: nil, action: nil)
         
         // tableview
         let nib  = UINib(nibName: "SantaLetterCell", bundle:  nil)
@@ -31,6 +33,16 @@ class LettersToSantaViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if (!initialViewing) {
+            initialViewing = false
+            getLetters(to: "LetterToSanta")
+            tableView.reloadData()
+        }
+        
     }
     
     func getLetters(to: String) {
@@ -49,6 +61,12 @@ class LettersToSantaViewController: UIViewController {
             controller.to = "LetterToSanta"
         }
         
+        else if (segue.identifier == "toLetterSetup") {
+            let controller = segue.destination as! LetterSetupViewController
+            controller.profileInformation = profileInformation
+            controller.from = "User"
+        }
+        
         else if (segue.identifier == "toWriteLetter") {
             let controller = segue.destination as! WriteLetterViewController
             
@@ -64,7 +82,13 @@ class LettersToSantaViewController: UIViewController {
     
     
     @IBAction func addLetter(_ sender: UIButton) {
-        performSegue(withIdentifier: "toWriteLetter", sender: nil)
+//        performSegue(withIdentifier: "toWriteLetter", sender: nil)
+        performSegue(withIdentifier: "toLetterSetup", sender: nil)
+    }
+    
+    @IBAction func unwindToLettersToSanta(segue: UIStoryboardSegue) {
+        getLetters(to: "LetterToSanta")
+        tableView.reloadData()
     }
     
     

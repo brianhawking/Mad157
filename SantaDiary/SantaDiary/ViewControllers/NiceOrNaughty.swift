@@ -63,7 +63,10 @@ class NiceOrNaughty: UIViewController {
         feedbackView.layer.cornerRadius = 20
         feedbackView.layer.borderWidth = 2
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: profileInformation.image), style: .plain, target: nil, action: nil)
+        
+        profileInformation.image = ProfileManager().getProfileImage(profileName: profileInformation.name)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(contentsOfFile: profileInformation.image), style: .plain, target: nil, action: nil)
     }
     
     func animateProgressBars() {

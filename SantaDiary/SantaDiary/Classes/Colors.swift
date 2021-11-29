@@ -23,6 +23,7 @@ class GradientView: UIView {
 class Colors {
     let primary = "#216F60ff"
     let secondary = "#2D9480ff"
+    let buttonBackground = "#EDDDB8ff"
     
     func getGradient() -> [CGColor] {
         return [UIColor(hex: primary)!.cgColor, UIColor(hex:secondary)!.cgColor]

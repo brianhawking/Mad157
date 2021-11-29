@@ -117,10 +117,11 @@ class WriteLetterViewController: UIViewController {
                     to: "LetterToSanta"
             )) {
                 // letter saved
-                completionHandler?(true)
+                //completionHandler?(true)
                 
                 // go back
-                self.navigationController?.popViewController(animated: true)
+               // self.navigationController?.popViewController(animated: true)
+                performSegue(withIdentifier: "goBackToLettersViewController",sender: nil)
                 
             }
             else {

@@ -72,7 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.view.layer.borderWidth = 2
         cell.name.text = profiles[indexPath.row].name
         cell.age.text = profiles[indexPath.row].age()
-        cell.avatarImageView.image = UIImage(named: profiles[indexPath.row].image)
+        cell.avatarImageView.image = UIImage(contentsOfFile: ProfileManager().getProfileImage(profileName: profiles[indexPath.row].name))
         return cell
     }
     
@@ -86,6 +86,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             controller.profileInformation = profiles[row]
 
         }
+    }
+    
+    
+    @IBAction func deleteAllProfiles(_ sender: Any) {
+        ProfileManager().deleteAll()
     }
     
 }

@@ -11,7 +11,7 @@ import UIKit
 struct SantaImages {
     
     var avatar: [String] = [
-        "Bee", "Dino1", "Ladybug", "Snowman","Bee", "Dino1", "Ladybug", "Snowman","Bee", "Dino1", "Ladybug", "Snowman"
+        "TRex", "Bee-1", "HotDog", "Ankylosaurus","Styracosaurus", "Bee-hive", "Dog-1", "Footprint", "Pick", "SportsCar", "Sunflower"
     ]
     
     

@@ -63,45 +63,49 @@ class AddProfileViewController: UIViewController, UINavigationControllerDelegate
     
     func createProfile() {
         
-        if (imageNumber == -1) {
-            // user chose a custom image
-            
-            profile.name = nameTextView.text!
-            profile.image = "profilePic.png"
-            profile.birthDay = birthdayDatePicker.date
-            
-        }
-        else {
-            // user chose a premade image
-            profile.name = nameTextView.text!
-            profile.image = SantaImages().avatar[imageNumber]
-            profile.birthDay = birthdayDatePicker.date
-            
-        }
         
+        profile.name = nameTextView.text!
+        
+        let path = FileManager.default.urls(for: .documentDirectory, in:
+            .userDomainMask)[0]
+            .appendingPathComponent("Users")
+            .appendingPathComponent(profile.name)
+            .appendingPathComponent("profilePic.png")
+        
+        profile.image = path.path
+        profile.birthDay = birthdayDatePicker.date
+        
+        
+        var data = customImage.jpegData(compressionQuality: 1)! as NSData
+        
+        if (imageNumber != -1) {
+            // user chose a premade photo
+            customImage = UIImage(named:  SantaImages().avatar[imageNumber])!
+            data = customImage.pngData()! as NSData
+        }
+
         
         if (ProfileManager().createProfile(profile: profile)) {
             // profile created
             
-            if (imageNumber == -1) {
-                let data = customImage.pngData()! as NSData
-
-                let path = FileManager.default.urls(
-                    for: .documentDirectory, in: .userDomainMask)[0]
-                    .appendingPathComponent("Users")
-                    .appendingPathComponent(profile.name)
-                    .appendingPathComponent("profilePic.png")
-                
-                data.write(toFile: path.path, atomically: false)
-
-                if(data.write(toFile: path.path, atomically: true)) {
-                    print("Image successfully saved")
-                } else {
-                    print("image not saaved")
-                }
-                let photoURL = URL.init(fileURLWithPath: path.path)
-                print(photoURL)
+//
+            
+            
+            let path = FileManager.default.urls(
+                for: .documentDirectory, in: .userDomainMask)[0]
+                .appendingPathComponent("Users")
+                .appendingPathComponent(profile.name)
+                .appendingPathComponent("profilePic.png")
+            
+            data.write(toFile: path.path, atomically: false)
+            
+            if(data.write(toFile: path.path, atomically: true)) {
+                print("Image successfully saved")
+            } else {
+                print("image not saaved")
             }
+            let photoURL = URL.init(fileURLWithPath: path.path)
+            print(photoURL)
             
             
             self.navigationController?.popViewController(animated: true)
@@ -150,6 +154,8 @@ extension AddProfileViewController: UIImagePickerControllerDelegate {
                 self.imageNumber = image
                 self.isImageSelected = true
                 self.avatarImageView.image = UIImage(named: SantaImages().avatar[image])
+                
+                // save image as profilePic.png
             }
         }
     }
@@ -183,26 +189,8 @@ extension AddProfileViewController: UIImagePickerControllerDelegate {
         imageNumber = -1
         isImageSelected = true
         
-        customImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        customImage = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
         
-//        let data = customImage.pngData()! as NSData
-//        
-//        // temporary save in users folder
-//        let path = FileManager.default.urls(
-//            for: .documentDirectory, in: .userDomainMask)[0]
-//            .appendingPathComponent("Users")
-//            .appendingPathComponent("profilePic.png")
-//        
-//        if(data.write(toFile: path.path, atomically: true)) {
-//            print("Image successfully saved")
-//        } else {
-//            print("image not saved")
-//        }
-//        
-//        let photoURL = URL.init(fileURLWithPath: path.path)
-//        
-//        print(photoURL)
-
         guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
             return
         }

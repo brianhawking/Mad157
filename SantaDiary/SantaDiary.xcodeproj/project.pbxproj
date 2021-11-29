@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F72414B42753F3D100C09FF3 /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72414B32753F3D100C09FF3 /* customButton.swift */; };
+		F72414B62753F52500C09FF3 /* LetterSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72414B52753F52500C09FF3 /* LetterSetupViewController.swift */; };
 		F7484A7C26E8E8F9008B36E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7484A7B26E8E8F9008B36E1 /* AppDelegate.swift */; };
 		F7484A7E26E8E8F9008B36E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7484A7D26E8E8F9008B36E1 /* SceneDelegate.swift */; };
 		F7484A8026E8E8F9008B36E1 /* ListofProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7484A7F26E8E8F9008B36E1 /* ListofProfiles.swift */; };
@@ -66,10 +68,8 @@
 		F7A3D7FB2734E8F30019B134 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3D7FA2734E8F30019B134 /* PasswordViewController.swift */; };
 		F7A3D7FE2735829D0019B134 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3D7FD2735829D0019B134 /* Strings.swift */; };
 		F7A3D80027358AEF0019B134 /* ForParentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3D7FF27358AEF0019B134 /* ForParentsViewController.swift */; };
-		F7B48C13274C07E300D16F16 /* CreateProfielViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B48C12274C07E300D16F16 /* CreateProfielViewController.swift */; };
 		F7B48C15274C09C900D16F16 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B48C14274C09C900D16F16 /* TextFieldTableViewCell.swift */; };
 		F7B48C17274C0A0200D16F16 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B48C16274C0A0200D16F16 /* DatePickerTableViewCell.swift */; };
-		F7B48C19274C0E6900D16F16 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B48C18274C0E6900D16F16 /* BirthdayViewController.swift */; };
 		F7D4750426EA5ADB0052A0EA /* NiceOrNaughty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */; };
 		F7DB7D092746CE6D00A9F135 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DB7D082746CE6D00A9F135 /* ProfileManager.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +92,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F72414B32753F3D100C09FF3 /* customButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
+		F72414B52753F52500C09FF3 /* LetterSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterSetupViewController.swift; sourceTree = "<group>"; };
 		F7484A7826E8E8F9008B36E1 /* SantaDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SantaDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7484A7B26E8E8F9008B36E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7484A7D26E8E8F9008B36E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,10 +160,8 @@
 		F7A3D7FA2734E8F30019B134 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		F7A3D7FD2735829D0019B134 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F7A3D7FF27358AEF0019B134 /* ForParentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForParentsViewController.swift; sourceTree = "<group>"; };
-		F7B48C12274C07E300D16F16 /* CreateProfielViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfielViewController.swift; sourceTree = "<group>"; };
 		F7B48C14274C09C900D16F16 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		F7B48C16274C0A0200D16F16 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
-		F7B48C18274C0E6900D16F16 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		F7D4750326EA5ADB0052A0EA /* NiceOrNaughty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceOrNaughty.swift; sourceTree = "<group>"; };
 		F7DB7D082746CE6D00A9F135 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				F793BD0A271C9606004B991C /* LettersToSantaViewController.swift */,
+				F72414B52753F52500C09FF3 /* LetterSetupViewController.swift */,
 				F793BD0C271C9632004B991C /* MailboxViewController.swift */,
 				F76875792727238A00B55B2D /* ShowLetterFromSanta.swift */,
 				F768757B2728925F00B55B2D /* WriteLetterViewController.swift */,
@@ -295,8 +296,6 @@
 		F749E9B72746A45D00196D4D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				F7B48C12274C07E300D16F16 /* CreateProfielViewController.swift */,
-				F7B48C18274C0E6900D16F16 /* BirthdayViewController.swift */,
 				F7B48C14274C09C900D16F16 /* TextFieldTableViewCell.swift */,
 				F7B48C16274C0A0200D16F16 /* DatePickerTableViewCell.swift */,
 				F749E9C02746B72D00196D4D /* SelectAvatarCollectionViewController.swift */,
@@ -397,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				F793BD0E271C9BE6004B991C /* AddButton.swift */,
+				F72414B32753F3D100C09FF3 /* customButton.swift */,
 				F768757F272A414C00B55B2D /* nextSaveButton.swift */,
 			);
 			path = Views;
@@ -546,7 +546,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7B48C13274C07E300D16F16 /* CreateProfielViewController.swift in Sources */,
 				F7D4750426EA5ADB0052A0EA /* NiceOrNaughty.swift in Sources */,
 				F7687580272A414C00B55B2D /* nextSaveButton.swift in Sources */,
 				F75B328F2733130000EB3C12 /* IQKeyboardManager+OrientationNotification.swift in Sources */,
@@ -557,6 +556,7 @@
 				F7A3D80027358AEF0019B134 /* ForParentsViewController.swift in Sources */,
 				F75B328E2733130000EB3C12 /* IQKeyboardManager+Debug.swift in Sources */,
 				F749E9C12746B72D00196D4D /* SelectAvatarCollectionViewController.swift in Sources */,
+				F72414B42753F3D100C09FF3 /* customButton.swift in Sources */,
 				F7A3D7F52734D68B0019B134 /* SettingsViewController.swift in Sources */,
 				F768757A2727238A00B55B2D /* ShowLetterFromSanta.swift in Sources */,
 				F7484AAF26E91251008B36E1 /* ProfileListTableViewCell.swift in Sources */,
@@ -575,6 +575,7 @@
 				F75B32842733130000EB3C12 /* IQBarButtonItem.swift in Sources */,
 				F75B32832733130000EB3C12 /* IQTitleBarButtonItem.swift in Sources */,
 				F75B32852733130000EB3C12 /* IQToolbar.swift in Sources */,
+				F72414B62753F52500C09FF3 /* LetterSetupViewController.swift in Sources */,
 				F768757827270E8A00B55B2D /* MonthDate.swift in Sources */,
 				F793BD0D271C9632004B991C /* MailboxViewController.swift in Sources */,
 				F793BD0F271C9BE6004B991C /* AddButton.swift in Sources */,
@@ -591,7 +592,6 @@
 				F793BD0B271C9606004B991C /* LettersToSantaViewController.swift in Sources */,
 				F75B32942733130000EB3C12 /* IQUIView+Hierarchy.swift in Sources */,
 				F7B48C17274C0A0200D16F16 /* DatePickerTableViewCell.swift in Sources */,
-				F7B48C19274C0E6900D16F16 /* BirthdayViewController.swift in Sources */,
 				F7DB7D092746CE6D00A9F135 /* ProfileManager.swift in Sources */,
 				F7A3D7F92734E41F0019B134 /* FakecellViewController.swift in Sources */,
 				F749E9BF2746AD7800196D4D /* AvatarCollectionViewCell.swift in Sources */,

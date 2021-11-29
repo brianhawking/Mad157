@@ -24,7 +24,9 @@ class DiaryViewController: UIViewController {
         super.viewDidLoad()
         
         // put avatar in the top right navigation
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: profileInformation.image), style: .plain, target: nil, action: nil)
+        profileInformation.image = ProfileManager().getProfileImage(profileName: profileInformation.name)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(contentsOfFile: profileInformation.image), style: .plain, target: nil, action: nil)
         
         monthYearLabel.text = monthYear.asString()
         
